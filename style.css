@@ -1,0 +1,1958 @@
+body{
+    /* font-size: 5.2rem; */
+    /* font-family: "Poppins", serif; */
+    /* min-height: 3000px; */
+}
+
+.timeline .container,
+.fasilitas .container,
+.guru .container,
+.prestasi .container,
+.berita2 .container,
+.karyawan .container{
+    width: 1140px;
+}
+
+
+.hero,.visimisi,.berita,.kontak,footer{
+    font-family: "Poppins", serif;
+}
+
+.prestasi,.ekskul,.fasilitas,.banner,.timeline,.tab-tab,.pimpinan,.guru,.karyawan,.berita2{
+    font-family: "Poppins", serif;
+}
+
+.navbar-fixed{
+    /* transform: translateY(-100%); */
+    /* opacity: 0; */
+    backdrop-filter: blur(1px);
+    /* color: #000; */
+    /* position: absolute !important; */
+    /* top: -100%; */
+    background-color: rgba(0,0,0,.5);
+    /* width: 90%; */
+    /* margin: auto; */
+}
+
+header.navbar{   
+    /* transition: 0.5s ease-in-out; */
+    background-color: rgba(0,0,0,.5);
+    backdrop-filter: blur(1px);
+}
+
+.header{
+    border-bottom: 1px solid #fff;
+}
+
+.header,.navbar-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.2rem;
+    /* background-color: #000; */
+    width: 100%;
+}
+
+.header .navbar-top-left a{
+    text-decoration: none;
+}
+
+.navbar .navbar-top-left a,
+.navbar .navbar-top-right a{
+    color: #fff;
+}
+
+.navbar .navbar-top-left a,
+.navbar .navbar-top-right a,
+.navbar-bottom .navbar-nav a{
+    display: inline-block;
+    font-size: 1rem;
+    margin: 0 0.5rem;
+}
+
+
+.navbar .navbar-top-right a:hover{
+    color: #808080;
+}
+
+.navbar-bottom .navbar-brand{
+    /* background-color: #000; */
+    width: 50%;
+    
+}
+
+.navbar-bottom .navbar-nav a{
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: italic;
+    color: #fff;
+    margin: 0 1.5rem;
+    
+}
+
+.navbar-bottom .navbar-nav .nav-link:hover{
+    /* color: #808080; */
+}
+
+.navbar-bottom .navbar-nav .dropdown-menu{
+    padding: 10px;
+}
+
+.navbar-bottom .navbar-nav .dropdown-item{
+    color: #000;
+    margin: auto;
+}
+
+.navbar-bottom .navbar-nav .dropdown-item:hover{
+    background-color: #111F86;
+    opacity: 80%;
+    color: #fff;
+}
+
+.navbar-bottom .navbar-nav .nav-link::after,
+.banner .breadcrumb-item a::after{
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.2rem solid #111F86;
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.navbar-bottom .navbar-nav .nav-link:hover::after,
+.banner .breadcrumb-item a:hover::after{
+    transform: scaleX(1);
+}
+
+#hero .carousel-item img{
+    height: 620px;
+}
+
+.hero .hero_{
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #f5f5f5;
+  width: 1000px; */
+  height: 900px;
+  box-shadow: 0 30px 50px #dbdbdb;
+}
+
+
+.hero_ .slide .item{
+  width: 120px;
+  height: 170px;
+  position: absolute;
+  bottom: 20%;
+  left: 0;
+  transform: translate(0, 50%);
+  border-radius: 20px;
+  box-shadow: 0 10px 50px #505050;
+  background-position: 50% 50%;
+  background-size: cover;
+  display: inline-block;
+  transition: 0.5s;
+}
+
+.slide .item:nth-child(1),
+.slide .item:nth-child(2){
+  top: 0;
+  left: 0;
+  transform: translate(0, 0);
+  border-radius: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slide .item:nth-child(3){
+  left: calc(50% + 270px);
+  /* bottom: 45%; */
+}
+.slide .item:nth-child(4){
+  left: calc(50% + 420px);
+  /* bottom: 45%; */
+}
+.slide .item:nth-child(n + 5){
+  left: calc(50% + 570px);
+  /* bottom: 45%; */
+}
+/* .slide .item:nth-child(n + 6){
+  left: calc(50% +440px);
+} */
+
+.hero .slide .item:nth-last-child(1) {
+  width: 0;
+  overflow: hidden;
+  opacity: 0;
+  animation: show 0.5s linear 1 forwards;
+}
+
+@keyframes show{
+  to {
+    width: 120px;
+    opacity: 1;
+  }
+}
+
+.hero_ .item .content{
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  width: 300px;
+  text-align: left;
+  color: #eee;
+  transform: translate(0, -50%);
+  display: none;
+}
+
+.hero_ .slide .item:nth-child(2) .content{
+  display: block;
+}
+
+.hero_ .content .name{
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: bold;
+  width: 500px;
+  opacity: 0;
+  animation: animate 1s ease-in-out 0.7s 1 forwards;
+}
+
+.hero_ .content .deskripsi{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: animate 1s ease-in-out 1s 1 forwards;
+}
+
+.hero_ .button{
+  width: 65%;
+  text-align: center;
+  position: absolute;
+  bottom: 2.1rem;
+}
+
+@keyframes animate{
+  from{
+    opacity: 0;
+    transform: translate(0, 100px);
+    filter: blur(33px);
+  }
+
+  to{
+    opacity: 1;
+    transform: translate(0);
+    filter: blur(0);
+  }
+}
+
+.hero .button button{
+  width: 40px;
+  height: 35px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  margin: 0 5px;
+  border: 1px solid #fff;
+  transition: 0.3s;
+  background: transparent;
+  color: #fff;
+}
+
+.hero .button button:hover{
+  background: #111F86;
+}
+
+
+#berita{
+  margin-bottom: 5rem;
+}
+
+.berita .nav .nav-item .nav-link{
+    color: #58595b;
+}
+
+.berita .nav .nav-item .nav-link.active{
+    color: #000;
+    font-weight: 500;
+}
+
+.berita .card{
+  border: none;
+  border-radius: 0px;
+  /* box-shadow: 0 8px 24px hsla(0, 0%, 0%, 0.15); */
+}
+
+.berita .card_img{
+  margin-left: 100px;
+}
+
+.berita .card .card-img-overlay{
+  top: 240px;
+  left: 20px;
+}
+
+.berita .card .card-text{
+    font-weight: 300;
+    font-size: 0.9rem;
+    /* color: #808080; */
+    margin-bottom: 0.5rem;
+}
+
+.berita .card .card-link{
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #53721d;
+}
+
+.berita .card .card_kanan{
+  height: 162px;
+}
+
+.berita .card .card_img_kanan{
+  height: 161px;
+}
+
+.berita .card .card-link:hover{
+    text-decoration: underline;
+}
+
+.berita .card .card-link i{
+    padding-left: 0.5rem;
+}
+
+.berita .card_box{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 100px 50px;
+  padding: 100px 50px;
+}
+
+.berita .card_{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 350px;
+  max-width: 100%;
+  height: 300px;
+  background-color: #fff;
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+  transition: 0.5s;
+  border-radius: 10px;
+}
+
+.berita .card_ .img-box{
+  position: absolute;
+  top: 20px;
+  width: 300px;
+  height: 220px;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.berita .card_:hover{
+  height: 400px;
+}
+
+.berita .card_ img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.berita .card_:hover .img-box{
+  top: -100px;
+  scale: 0.75;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+
+.berita .card_box .content{
+  position: absolute;
+  top: 252px;
+  width: 100%;
+  height: 35px;
+  padding: 0 30px;
+  text-align: center;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.berita .card_box .card_:hover .content{
+  top: 130px;
+  height: 250px;
+}
+
+.berita .card_ .content h5{
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #808080;
+  padding-bottom: 1rem;
+}
+
+.berita .card_ .content h2{
+  color: #333;
+  margin-top: 10px;
+}
+
+.berita .card_ .content a{
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #53721d;
+}
+
+.berita .card_ .content a:hover{
+  text-decoration: underline;
+}
+
+.berita .card_ .content a i{
+  padding-left: 0.5rem;
+}
+
+/* Kalender */
+
+:root {
+    --primary-clr: #111F86;
+  }
+
+  /* nice scroll bar */
+  #kalender ::-webkit-scrollbar {
+    width: 5px;
+  }
+  #kalender ::-webkit-scrollbar-track {
+    background: #f5f5f5;
+    border-radius: 50px;
+  }
+  #kalender ::-webkit-scrollbar-thumb {
+    background: var(--primary-clr);
+    border-radius: 50px;
+  }
+  
+  /* body {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 30px;
+    background-color: #e2e1dc;
+  } */
+
+  #kalender{ 
+    background-color: #373c4f;
+    background-size: cover;
+  }
+
+  #kalender .container.tanggal {
+    position: relative;
+    width: 100%;
+    min-height: 850px;
+    margin: 0 auto;
+    padding: 5px;
+    color: #fff;
+    display: flex;
+    border-radius: 10px;
+  }
+  #kalender .left {
+    width: 60%;
+    padding: 20px;
+  }
+  #kalender .calendar {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: #878895;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+  /* set after behind the main element */
+  #kalender .calendar::before,
+  #kalender .calendar::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 12px;
+    height: 97%;
+    border-radius: 0 5px 5px 0;
+    background-color: #d3d4d6d7;
+    transform: translateY(-50%);
+  }
+  #kalender .calendar::before {
+    height: 94%;
+    left: calc(100% + 12px);
+    background-color: rgb(153, 153, 153);
+  }
+  #kalender .calendar .month {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: capitalize;
+  }
+  #kalender .calendar .month .prev,
+  #kalender .calendar .month .next {
+    cursor: pointer;
+  }
+  #kalender .calendar .month .prev:hover,
+  #kalender .calendar .month .next:hover {
+    color: var(--primary-clr);
+  }
+  #kalender .calendar .weekdays {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+  }
+  #kalender .weekdays div {
+    width: 14.28%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #kalender .calendar .days {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  #kalender .calendar .days .day {
+    width: 14.28%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--primary-clr);
+    border: 1px solid #f5f5f5;
+  }
+  #kalender .calendar .days .day:nth-child(7n + 1) {
+    border-left: 2px solid #f5f5f5;
+  }
+  #kalender .calendar .days .day:nth-child(7n) {
+    border-right: 2px solid #f5f5f5;
+  }
+  #kalender .calendar .days .day:nth-child(-n + 7) {
+    border-top: 2px solid #f5f5f5;
+  }
+  #kalender .calendar .days .day:nth-child(n + 29) {
+    border-bottom: 2px solid #f5f5f5;
+  }
+  
+  #kalender .calendar .days .day:not(.prev-date, .next-date):hover {
+    color: #fff;
+    background-color: var(--primary-clr);
+  }
+  #kalender .calendar .days .prev-date,
+  #kalender .calendar .days .next-date {
+    color: #b3b3b3;
+  }
+  #kalender .calendar .days .active {
+    position: relative;
+    font-size: 2rem;
+    color: #fff;
+    background-color: var(--primary-clr);
+  }
+  #kalender .calendar .days .active::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 10px 2px var(--primary-clr);
+  }
+  #kalender .calendar .days .today {
+    font-size: 2rem;
+  }
+  #kalender .calendar .days .event {
+    position: relative;
+  }
+  #kalender .calendar .days .event::after {
+    content: "";
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    width: 75%;
+    height: 6px;
+    border-radius: 30px;
+    transform: translateX(-50%);
+    background-color: var(--primary-clr);
+  }
+  #kalender .calendar .days .day:hover.event::after {
+    background-color: #fff;
+  }
+  #kalender .calendar .days .active.event::after {
+    background-color: #fff;
+    bottom: 20%;
+  }
+  #kalender .calendar .days .active.event {
+    padding-bottom: 10px;
+  }
+  #kalender .calendar .goto-today {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    color: var(--primary-clr);
+  }
+  #kalender .calendar .goto-today .goto {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid var(--primary-clr);
+  }
+  #kalender .calendar .goto-today .goto input {
+    width: 100%;
+    height: 30px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 0 20px;
+    color: var(--primary-clr);
+    border-radius: 5px;
+  }
+  #kalender .calendar .goto-today button {
+    padding: 5px 10px;
+    border: 1px solid var(--primary-clr);
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    color: var(--primary-clr);
+  }
+  #kalender .calendar .goto-today button:hover {
+    color: #fff;
+    background-color: var(--primary-clr);
+  }
+  #kalender .calendar .goto-today .goto button {
+    border: none;
+    border-left: 1px solid var(--primary-clr);
+    border-radius: 0;
+  }
+  #kalender .container .right {
+    position: relative;
+    width: 40%;
+    min-height: 100%;    
+    padding: 20px 0;
+
+  }
+  
+  #kalender .right .today-date {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    padding-left: 70px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+  }
+  #kalender .right .today-date .event-day {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  #kalender .right .today-date .event-date {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #878895;
+  }
+  #kalender .events {
+    width: 100%;
+    height: 100%;
+    max-height: 600px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    padding-left: 4px;
+  }
+  #kalender .events .event {
+    position: relative;
+    width: 95%;
+    min-height: 70px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0 20px;
+    padding-left: 50px;
+    color: #fff;
+    background: linear-gradient(90deg, #3f4458, transparent);
+    cursor: pointer;
+  }
+  /* even event */
+  #kalender .events .event:nth-child(even) {
+    background: transparent;
+  }
+  #kalender .events .event:hover {
+    background: linear-gradient(90deg, var(--primary-clr), transparent);
+  }
+  #kalender .events .event .title {
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+  }
+  #kalender .events .event .title .event-title {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-left: 20px;
+  }
+  #kalender .events .event i {
+    color: var(--primary-clr);
+    font-size: 0.5rem;
+  }
+  #kalender .events .event:hover i {
+    color: #fff;
+  }
+  #kalender .events .event .event-time {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #878895;
+    margin-left: 15px;
+    pointer-events: none;
+  }
+  #kalender .events .event:hover .event-time {
+    color: #fff;
+  }
+  /* add tick in event after */
+  #kalender .events .event::after {
+    content: "✓";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    font-size: 3rem;
+    line-height: 1;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.3;
+    color: var(--primary-clr);
+    transform: translateY(-50%);
+  }
+  #kalender .events .event:hover::after {
+    display: flex;
+  }
+  #kalender .add-event {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: #878895;
+    border: 2px solid #878895;
+    opacity: 0.5;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  #kalender .add-event:hover {
+    opacity: 1;
+  }
+  #kalender .add-event i {
+    pointer-events: none;
+  }
+  #kalender .events .no-event {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #878895;
+  }
+  #kalender .add-event-wrapper {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    width: 90%;
+    max-height: 0;
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: #fff;
+    transform: translateX(-50%);
+    transition: max-height 0.5s ease;
+  }
+  #kalender .add-event-wrapper.active {
+    max-height: 300px;
+  }
+  #kalender .add-event-header {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    color: #373c4f;
+    border-bottom: 1px solid #f5f5f5;
+  }
+  #kalender .add-event-header .close {
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  #kalender .add-event-header .close:hover {
+    color: var(--primary-clr);
+  }
+  #kalender .add-event-header .title {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  #kalender .add-event-body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 20px;
+  }
+  #kalender .add-event-body .add-event-input {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  #kalender .add-event-body .add-event-input input {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #f5f5f5;
+    padding: 0 10px;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #373c4f;
+  }
+  #kalender .add-event-body .add-event-input input::placeholder {
+    color: #a5a5a5;
+  }
+  #kalender .add-event-body .add-event-input input:focus {
+    border-bottom: 1px solid var(--primary-clr);
+  }
+  #kalender .add-event-body .add-event-input input:focus::placeholder {
+    color: var(--primary-clr);
+  }
+  #kalender .add-event-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  #kalender .add-event-footer .add-event-btn {
+    height: 40px;
+    font-size: 1rem;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    color: #fff;
+    background-color: var(--primary-clr);
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+    border: 1px solid var(--primary-clr);
+  }
+  #kalender .add-event-footer .add-event-btn:hover {
+    background-color: transparent;
+    color: var(--primary-clr);
+  }
+
+/* Kontak */
+
+.kontak{
+    font-size: 0.9rem;
+}
+
+.kontak .table td{
+    padding: 20px 15px;
+}
+
+.kontak .table a{
+    color: #000;
+    text-decoration: none;
+    font-style: normal;
+    /* font-weight: 400; */
+}
+
+.kontak form label{
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+
+.banner{
+    /* content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; */
+    background: url(../image/bg2.jpg) rgba(14, 49, 74, 0.5);
+    background-size: contain;
+    background-blend-mode: multiply;
+    height: 300px;
+}
+
+.banner .banner-content{
+    margin-left: 2rem;
+}
+
+.banner h1{
+    margin-top: 8rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    font-size: 2.3rem;
+}
+
+.banner .breadcrumb-item,
+.banner .breadcrumb-item a {
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* Sejarah */
+
+.timeline .container{
+    margin: 8rem auto;
+}
+
+.timeline .carousel{
+    position: relative;
+}
+
+.timeline .carousel .carousel-indicators{
+    top: 50px;
+    width: 75%;
+    margin-left: 14%;
+    position: static;
+    margin-bottom: 40px;
+}
+
+.timeline .carousel .carousel-indicators button{
+    text-indent: 0 !important;
+    background: 0 0;
+    border: none;
+    margin: 0 !important;
+    position: relative;
+    width: 25% !important;
+}
+
+.timeline .carousel .carousel-indicators button::before{
+    content: "";
+    position: absolute;
+    border-top: 4px solid rgba(14, 49, 74, 0.5);
+    width: 100%;
+    left: 0;
+}
+
+.timeline .carousel .carousel-indicators button h4{
+    position: absolute;
+    margin-top: -41px;
+    left: 52%;
+    transform: translateX(-50%);
+}
+
+.timeline .carousel .carousel-indicators button i{
+    position: absolute;
+    margin-top: -8px;
+    margin-left: -2px;
+}
+
+.timeline .carousel .carousel-indicators button.active i{
+    font-size: 20px;
+    margin-top: -12px;
+    margin-left: -5px;
+}
+
+.timeline .carousel .carousel-indicators button.active h4{
+    position: absolute;
+    font-size: 29px;
+    text-align: center;
+    margin-top: -49px;
+}
+
+.timeline .carousel .slide-one{
+    padding: 0px 50px;
+}
+
+.timeline .carousel .carousel-item .slide-text{
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.timeline .carousel .carousel-item .slide-text h3{
+    margin-bottom: 1.9rem;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #242B55;
+}
+
+
+.timeline .carousel .carousel-control-next,
+.timeline .carousel .carousel-control-prev {
+    width: 2%;
+    opacity: 0.8;
+} 
+
+.timeline .carousel .carousel-control-next-icon i,
+.timeline .carousel .carousel-control-prev-icon i {
+    font-size: 2rem;
+    color: #333;
+}
+
+/* Struktur Organisasi */
+
+.tab-tab .nav-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+.tab-tab .nav-tabs .nav-item{
+    background: #f8f8fb;
+    border-radius: unset;
+    flex: 1;
+}
+
+.tab-tab .nav-tabs .nav-item .nav-link{
+    align-items: center;
+    /* border-top: 0.6rem solid #eaeaea;
+    border-bottom: 0.6rem solid #eaeaea; */
+    border-radius: unset;
+    color: #58595b;
+    display: flex;
+    font-size: 1.06rem;
+    font-weight: 500;
+    height: 6.25rem;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+.tab-tab .nav-tabs .nav-item .nav-link.active{
+    background: #fff;
+    border: unset;
+    border-top: 6px solid #D24C16;
+    color: #111F86;
+    font-weight: 600;
+}
+
+.tab-tab .nav-tabs .nav-item .nav-link:hover{
+    background-color: #58595b;
+    color: #fff;
+}
+
+.tab-tab .nav-tabs .nav-item .nav-link.active:hover{
+    background-color: #fff;
+    color: #111F86;
+}
+
+.pimpinan,
+.guru,
+.karyawan,
+.fasilitas,
+.prestasi,
+.visimisi,
+.berita,
+.berita2,
+#kontak{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.pimpinan .container .row,
+.guru .container .row
+.fasilitas .container .row,
+.berita2 .container .row,
+.prestasi .container .row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pimpinan .card{
+    margin-top: 3rem;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2.18rem;
+    text-align: center;
+    border: 0;
+}
+
+.pimpinan .card .card-img{
+    margin-bottom: 1.2rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 100%;
+}
+
+.pimpinan .card .card-img img{
+    width: 168px;
+}
+
+.pimpinan .card .card-info .nama{
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.8rem;
+}
+
+.pimpinan .card .card-info .jabatan{
+    margin-bottom: 0;
+    margin-top: 0.5rem;
+}
+
+/* Guru */
+.guru,
+.karyawan{
+    padding-bottom: 8rem;
+}
+
+.guru .nav-pills .nav-link,
+.fasilitas .nav-pills .nav-link,
+.karyawan .nav-pills .nav-link{
+    border-color: #e3e3e3;
+    background-color: #ebebeb;
+    color: #666;
+    text-align: left;
+    height: 4rem;
+    font-size: 0.9rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.guru .nav-pills .nav-link:hover,
+.fasilitas .nav-pills .nav-link:hover,
+.karyawan .nav-pills .nav-link:hover{
+    background-color: #a2a2a2;
+    color: #fff;
+}
+
+.guru .nav-pills .nav-link.active,
+.fasilitas .nav-pills .nav-link.active,
+.karyawan .nav-pills .nav-link.active{
+    border-color: #f0f0f0;
+    background-color: #f8f8f8;
+    color: #666;
+}
+
+.guru .tab-pane .row,
+.karyawan .tab-pane .row{
+  row-gap: 90px;
+}
+
+.guru .tab-pane .card,
+.karyawan .tab-pane .card{
+    width: 22rem;
+    height: 15rem;
+}
+
+.guru .tab-pane .card img,
+.karyawan .tab-pane .card img{
+    height: 19rem;
+}
+
+.guru .tab-pane .card .card-img-overlay,
+.karyawan .tab-pane .card .card-img-overlay{
+    padding: 0;
+    /* top: 17rem; */
+}
+
+.guru .tab-pane .card .card-title,
+.karyawan .tab-pane .card .card-title{
+    cursor: pointer;
+    background-color: #fff;
+    color: #000;
+    padding: 0.8rem;
+    border: none;
+}
+
+.guru .tab-pane .card .card-title:hover,
+.karyawan .tab-pane .card .card-title:hover{
+    opacity: 1;
+    padding-top: 2.5rem;
+    transition: all 0.3s ease;
+}
+
+/* fasilitas */
+
+.fasilitas .tab-pane .card{
+    width: 25.5rem;
+    border: none;
+}
+
+.fasilitas .tab-pane .card img{
+    height: 17rem;
+}
+
+.fasilitas .tab-pane .card .card-body{
+    padding-top: 2rem;
+    padding-left: 0;
+}
+
+.fasilitas .tab-pane .card .card-title{
+    font-size: 1rem;
+}
+
+/* Prestasi */
+
+.prestasi .judul,
+.berita2 .judul
+{
+  padding-bottom: 1.5rem;
+}
+
+.prestasi .card,
+.berita2 .card
+ {
+  border: none;
+}
+
+.prestasi .card .card-body,
+.berita2 .card .card-body
+{
+  padding: 2rem 2rem;
+}
+
+.prestasi .card .card-body .card-title,
+.prestasi .card .card-body .card-text,
+.berita2 .card .card-body .card-title,
+.berita2 .card .card-body .card-text  {
+  padding-bottom: 0.25rem;
+}
+
+.prestasi .card .card-body .card-text a,
+.berita2 .card .card-body .card-text a
+{
+  color: #000;
+  text-decoration: none;
+}
+
+.prestasi .card .card-body .card-text a:hover,
+.berita2 .card .card-body .card-text a:hover
+{
+  color: #111F86;
+}
+
+/* Ekstrakulikuler */
+
+.ekskul .carousel-item img{
+  width: 636px;
+  height: 400px;
+}
+
+.ekskul .detail .judul{
+  color: #111F86;
+  margin-bottom: 40px;
+}
+
+.ekskul .detail .badge{
+  background: #111F86;
+  padding: 0.7rem 1rem;
+  margin-right: 0.7rem;
+}
+
+.ekskul .detail .badge:hover{
+  opacity: 0.5;
+  cursor: default;
+}
+
+.karyawan .card-img-overlay .card-title span{
+  font-size: 0.8rem;
+  color: #111F86;
+}
+
+/* Footer */
+
+footer{
+    background-color: #111F86;
+}
+
+footer .widget-area-footer{
+    padding-top: 2rem;
+}
+
+.widget-area-footer .kontak,
+.widget-area-footer .info{
+    text-align: left;
+    font-size: 0.8rem;
+}
+
+.widget-area-footer .kontak ul li,
+.widget-area-footer .kontak ul li a, 
+.widget-area-footer .info ul li, 
+.widget-area-footer .info ul li a {
+    list-style: none;
+    text-decoration: none;
+    color: #fff;
+    font-style: normal;
+}
+
+.widget-area-footer ul li a:hover{
+    color: grey;
+}
+
+footer .border-bottom{
+    width: 88%;
+}
+
+footer .copyright-socialmedia{
+    padding-top: 1rem;
+}
+
+footer .copyright-socialmedia a i:hover{
+    color: grey;
+}
+
+footer .logo p{
+    padding-top: 2.5rem;
+    text-align: left;
+}
+
+
+@media (max-width: 1024px){
+
+  .hero .hero_{
+    height: 590px;
+  }
+
+  .hero_ .slide .item{
+    width: 120px;
+    height: 170px;
+    bottom: 20%;
+    left: 0;
+    background-position: 50% 50%;
+  }
+
+  .slide .item:nth-child(1),
+  .slide .item:nth-child(2){
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    border-radius: 0;
+    width: 103%;
+    height: 71%;
+  }
+
+  .slide .item:nth-child(3){
+    left: calc(30% + 270px);
+    bottom: 45%;
+  }
+  .slide .item:nth-child(4){
+    left: calc(30% + 420px);
+    bottom: 45%;
+  }
+  .slide .item:nth-child(n + 5){
+    left: calc(30% + 570px);
+    bottom: 45%;
+  }
+
+  .visimisi ol{
+    font-size: 0.9rem;
+  }
+
+  .visimisi .logo img{
+    width: 400px;
+    position: absolute;
+    top: 750px;
+    right: 90px;
+  }
+
+  .berita .card_box{
+    padding: 50px 0;
+    margin-bottom: 100px;
+    gap: 100px 30px;
+  }
+
+  .berita .card_{
+    width: 292px;
+    height: 300px;
+  }
+
+  .berita .card_ .img-box{
+    width: 252px;
+    height: 170px;
+  }
+
+  .berita .card_box .card_ .content{
+    top: 217px;
+  }
+
+  .berita .card_img{
+    margin-left: 0;
+  }
+
+  .berita .card .card-img-overlay{
+    top: 185px;
+  }
+
+  .berita .card .card_kanan{
+    height: 139px;
+  }
+
+  .berita .card .card_img_kanan{
+    height: 140px;
+  }
+
+  .berita .card .card-body{
+    height: 140px;
+    padding-top: 11px;
+  }
+  
+  .berita .card h5.card-title{
+    font-size: 1.2rem;
+  }
+
+  .berita .card p.card-text{
+    font-size: 0.85rem;
+  }
+
+  .berita .card p small{
+    font-size: 0.7rem;
+  }
+
+  #kalender{
+    width: 1055px;
+  }
+
+  /* #kalender .container.tanggal{
+    min-height: 800px;
+  }
+
+  #kalender .tanggal .left{
+    height: 750px;
+  } */
+
+  #kalender .calendar .month{
+    height: 80px;
+    margin-top: 30px;
+  }
+
+  #kalender .calendar .weekdays{
+    height: 50px;
+  }
+
+  #kalender .right .today-date{
+    margin-top: 25px;
+  }
+
+  #kalender .tanggal .right{
+    height: 750px;
+  }
+
+  #kalender .calendar .days .day{
+    height: 80px;
+  }
+
+  footer{
+    width: 1055px;
+  }
+}
+
+@media (max-width: 768px){
+
+}
+
+@media (max-width: 576px){
+
+/* all{ */
+
+  body{
+    width: 1025px;
+  }
+
+  header .header{
+    border-bottom: 0;
+  }
+
+  header.navbar{
+    width: 1060px;
+    height: 180px;
+  }
+
+  header .header .navbar-top{
+    display: none;
+  }
+
+  .navbar .navbar-bar nav{
+    padding-bottom: 1rem;
+  }
+
+  .navbar .navbar-bar .navbar-brand img{
+    width: 100%;
+  }
+
+  .hero{
+    height: 1500px;
+  }
+
+  .hero .hero_ .item{
+    height: 1530px;
+  }
+
+  .slide .item:nth-child(1),
+  .slide .item:nth-child(2){
+    width: 1060px;
+  }
+
+  .slide .item:nth-child(3){
+    left: calc(50% + 300px);
+    width: 230px;
+    height: 350px;
+    top: 110%;
+  }
+  .slide .item:nth-child(4){
+    left: calc(50% + 600px);
+    width: 230px;
+    height: 350px;
+    top: 110%;
+  }
+  .slide .item:nth-child(n + 5){
+    left: calc(50% + 900px);
+    width: 230px;
+    height: 350px;
+    top: 110%;
+  }
+
+  .hero_ .item .content{
+    top: 60%;
+    left: 50px;
+  }
+
+  .hero_ .content .name{
+    font-size: 50px;
+    width: 800px;
+  }
+
+  .hero_ .button {
+    width: 65%;
+    top: 160%;
+    left: 20%;
+    text-align: center;
+    position: absolute;
+  } 
+
+  .hero .button button {
+    width: 70px;
+    height: 65px;
+  }
+
+  .visimisi{
+    height: 1500px;
+    padding-top: 7rem;
+    padding-left: 5rem;
+    padding-right: 3rem;
+  }
+
+  .visimisi .logo img {
+    width: 600px;
+    position: absolute;
+    top: 2350px;
+    left: 60%;
+  }
+
+  .visimisi .badan h2{
+    font-size: 3rem;
+  }
+
+  .visimisi .badan h4{
+    font-size: 2.5rem;
+  }
+
+  .visimisi .badan p,
+  .visimisi .badan li{
+    font-size: 1.5rem;
+  }
+
+  #berita{
+    margin-bottom: 0;
+  }
+
+  .berita .container .col-4 h2{
+    font-size: 3rem;
+  }
+
+  .berita .container .tab-pane{
+    padding-left: 1.8rem;
+  }
+
+  .berita .container .nav{
+    width: 410px;
+  }
+
+  .berita .container .nav .nav-link{
+    font-size: 1.5rem;
+  }
+
+  .berita #prestasi-tab-pane .card{
+    padding-top: 3rem;
+  }
+
+  .berita #prestasi-tab-pane .card img,
+  .berita #prestasi-tab-pane .card .card-body{
+    width: 700px !important;
+    margin-left: 140px;
+  }
+
+  .berita #berita-tab-pane .card{
+    margin-bottom: 2.5rem !important;
+  }
+
+  .berita #berita-tab-pane .card .card-img-overlay p small{
+    font-size: 1rem;
+  }
+
+  .berita #berita-tab-pane .card .card-img-overlay .card-title{
+    font-size: 1.5rem;
+  }
+
+  .berita #berita-tab-pane .card .card_kanan{
+    height: 300px;
+  }
+
+  .berita #berita-tab-pane .card .card_kanan .card_img_kanan{
+    height: 150px;
+  }
+
+  .berita #berita-tab-pane .card .card_kanan .card_img_kanan img{
+    height: 305px;
+  }
+
+  .kontak {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .kontak .container .row .col h2{
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  .kontak .table{
+    margin-bottom: 3rem;
+  }
+
+  .kontak .table td {
+    font-size: 1.5rem;
+  }
+
+  .kontak .col-md-8 form label{
+    font-size: 1.5rem;
+  }
+
+  .kontak .col-md-8 form select,
+  .kontak .col-md-8 form input
+  {
+    font-size: 1.3rem;
+    height: 4rem;
+  }
+
+  .kontak .col-md-8 form textarea{
+    height: 8rem;
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .kontak .col-md-8 form button{
+    font-size: 1.5rem;
+  }
+
+  footer .widget-area-footer{
+    padding: 3rem;
+  }
+
+  footer .widget-area-footer .kontak h4,
+  footer .widget-area-footer .info h4{
+    font-size: 2.8rem;    
+  }
+
+  footer .widget-area-footer .kontak{
+    padding-bottom: 2rem;
+  }
+
+  footer .widget-area-footer .kontak ul li,
+  footer .widget-area-footer .info ul li{
+    font-size: 1.3rem;
+    padding-bottom: 0.5rem !important;
+  }
+
+  footer .copyright-socialmedia{
+    padding-top: 2rem;
+  }
+
+  footer .copyright-socialmedia a{
+    padding-left: 2rem;
+    font-size: 2rem;
+  }
+
+  footer .copyright-socialmedia p{
+    padding-top: 1.5rem !important;
+    font-size: 1.4rem;
+  }
+
+}
+
+/* semua {
+
+  body{
+    width: 395px;
+  }
+
+  header .header{
+    border-bottom: 0;
+  }
+
+  header.navbar{
+    width: 395px;
+    height: 100px;
+    padding-top: 0;
+  }
+
+  header .header{
+    display: none;
+  }
+
+  .navbar .navbar-bar{
+    padding-left: 0;
+  }
+
+  .navbar .navbar-bar nav{
+    padding-top: 1.2rem;
+  }
+
+  .navbar .navbar-bar nav .container{
+    padding-left: 0;
+  }
+
+  .navbar .navbar-bar .navbar-brand img{
+    width: 130%;
+  }
+
+  .hero{
+    height: 770px;
+  }
+
+  .hero .hero_ .item{
+    height: 770px;
+  }
+
+  .slide .item:nth-child(1),
+  .slide .item:nth-child(2){
+    width: 395px;
+  }
+
+  .slide .item:nth-child(3){
+    left: calc(50% + 50px);
+    width: 100px;
+    height: 160px;
+    top: 65%;
+  }
+  .slide .item:nth-child(4){
+    left: calc(50% + 180px);
+    width: 100px;
+    height: 160px;
+    top: 65%;
+  }
+  .slide .item:nth-child(n + 5){
+    left: calc(50% + 315px);
+    width: 100px;
+    height: 160px;
+    top: 65%;
+  }
+
+  .hero_ .item .content{
+    top: 70%;
+    left: 30px;
+  }
+
+  .hero_ .content .name{
+    font-size: 25px;
+    width: 300px;
+  }
+
+  .hero_ .button {
+    width: 65%;
+    right: 38%;
+    text-align: center;
+    position: absolute;
+  } 
+
+  .hero .button button {
+    width: 40px;
+    height: 35px;
+  }
+
+  .visimisi{
+    height: 1000px;
+    padding-top: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .visimisi .logo img {
+    width: 350px;
+    position: absolute;
+    top: 1450px;
+    left: 6%;
+  }
+
+  .visimisi .badan h2{
+    font-size: 1.5rem;
+  }
+
+  .visimisi .badan h4{
+    font-size: 1.2rem;
+  }
+
+  .visimisi .badan p,
+  .visimisi .badan li{
+    font-size: 1rem;
+  }
+  
+  .berita .row{
+    justify-content: start !important;
+  }
+
+  .berita .container .col-4 .nav-tabs{
+    padding-top: 1rem !important;
+  }
+
+  .berita .container .col-4 h2{
+    font-size: 1.5rem;
+  }
+
+  .berita .container .tab-pane{
+    padding-left: 1.8rem;
+  }
+
+  .berita .container .nav{
+    width: 410px;
+  }
+
+  .berita .container .nav .nav-link{
+    font-size: 0.8rem;
+  }
+
+  .berita .card{
+    padding-right: 1.5rem;
+  }
+
+  .kontak {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .kontak .container .row .col h2{
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  .kontak .table{
+    margin-bottom: 3rem;
+  }
+
+  .kontak .table td {
+    font-size: 1rem;
+  }
+
+  .kontak .col-md-8 form label{
+    font-size: 1rem;
+  }
+
+  .kontak .col-md-8 form select,
+  .kontak .col-md-8 form input
+  {
+    font-size: 1rem;
+    height: 4rem;
+  }
+
+  .kontak .col-md-8 form textarea{
+    height: 8rem;
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .kontak .col-md-8 form button{
+    font-size: 1.2rem;
+  }
+
+  footer{
+    width: 395px;
+  }
+
+  footer .widget-area-footer .kontak h4,
+  footer .widget-area-footer .info h4{
+    font-size: 2rem;    
+  }
+
+  footer .widget-area-footer .kontak{
+    padding-bottom: 2rem;
+  }
+
+  footer .widget-area-footer .kontak ul li,
+  footer .widget-area-footer .info ul li{
+    font-size: 1rem;
+    padding-bottom: 0.5rem !important;
+  }
+
+  footer .copyright-socialmedia{
+    padding-top: 2rem;
+  }
+
+  footer .copyright-socialmedia a{
+    padding-left: 1rem;
+    font-size: 1.5rem;
+  }
+
+  footer .copyright-socialmedia p{
+    padding-top: 1.5rem !important;
+    font-size: 1rem;
+  }
+
+} */
+
+}
