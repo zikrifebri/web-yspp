@@ -11,36 +11,55 @@ window.onscroll = function () {
 
 //Slide Hero
 
-let Next = document.querySelector('.next_');
-let Prev = document.querySelector('.prev_');
-const slide = document.querySelector('.slide');
+// let Next = document.querySelector('.next_');
+// let Prev = document.querySelector('.prev_');
+// const slide = document.querySelector('.slide');
 
 // autoplay slide
 
-let runAutoPlay = setTimeout(() => {
-  Next.click();
-}, 8000);
+// let runAutoPlay = setTimeout(() => {
+//   Next.click();
+// }, 8000);
 
 
-Next.addEventListener('click', function(){
-  let items = document.querySelectorAll('.item')
-  document.querySelector('.slide').appendChild(items[0])
-  initSlide('Next')
-})
+// Next.addEventListener('click', function(){
+//   let items = document.querySelectorAll('.item')
+//   document.querySelector('.slide').appendChild(items[0])
+//   initSlide('Next')
+// })
 
-Prev.addEventListener('click', function(){
-  let items = document.querySelectorAll('.item')
-  document.querySelector('.slide').prepend(items[items.length - 1])
-  initSlide('Prev')
-})
+// Prev.addEventListener('click', function(){
+//   let items = document.querySelectorAll('.item')
+//   document.querySelector('.slide').prepend(items[items.length - 1])
+//   initSlide('Prev')
+// })
 
-const initSlide = (type) => {
+// const initSlide = (type) => {
 
-  clearTimeout(runAutoPlay);
-  runAutoPlay = setTimeout(() => {
-    Next.click();
-  }, 8000);
-};
+//   clearTimeout(runAutoPlay);
+//   runAutoPlay = setTimeout(() => {
+//     Next.click();
+//   }, 8000);
+// };
+
+// slide kelebihan
+
+// const slides = document.querySelectorAll('.slide');
+
+// function slideShow(){
+//   const current = document.querySelector('.active')
+//   current.classList.remove('active');
+  
+//   if(current.nextElementSibling){
+//       current.nextElementSibling.classList.add('active')
+//   }else{
+//       slides[0].classList.add('active')
+//   }
+
+//   setTimeout('slideShow()', 5000)
+// }
+
+// window.onload = slideShow;
 
 window.addEventListener("load", function() {
     const form = document.getElementById('my-form');
@@ -71,6 +90,8 @@ window.addEventListener("load", function() {
       })
     });
   });
+
+// swiper slider
 
 
 

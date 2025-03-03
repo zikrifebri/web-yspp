@@ -14,11 +14,11 @@ body{
 }
 
 
-.hero,.visimisi,.berita,.kontak,footer{
+.hero,.visimisi,.kelebihan,.berita,.unit,.kontak,footer{
     font-family: "Poppins", serif;
 }
 
-.prestasi,.ekskul,.fasilitas,.banner,.timeline,.tab-tab,.pimpinan,.guru,.karyawan,.berita2{
+.prestasi,.ekskul,.fasilitas,.banner,.timeline,.tab-tab,.pimpinan,.guru,.karyawan,.berita2,.kalender_table{
     font-family: "Poppins", serif;
 }
 
@@ -77,8 +77,12 @@ header.navbar{
 
 .navbar-bottom .navbar-brand{
     /* background-color: #000; */
-    width: 50%;
-    
+    width: 600px;
+    margin-right: 0;
+}
+
+.navbar .navbar-bar nav .offcanvas{
+  margin-top: 1.5rem;
 }
 
 .navbar-bottom .navbar-nav a{
@@ -125,7 +129,7 @@ header.navbar{
 }
 
 #hero .carousel-item img{
-    height: 620px;
+    height: 930px;
 }
 
 .hero .hero_{
@@ -262,6 +266,140 @@ header.navbar{
 
 .hero .button button:hover{
   background: #111F86;
+}
+
+.visimisi .tentang_visimisi{
+  border: 0.0625rem solid #eaeaea;
+  border-radius: 1rem;
+  margin-top: 3.125rem;
+  overflow: hidden;
+}
+
+.visimisi .tentang_visimisi .visi_{
+  background: #111F86;
+  color: #fff;
+  display: flex;
+  font-weight: 500;
+}
+
+.visimisi .tentang_visimisi .visi_ .content{
+  /* flex: 3; */
+  font-size: 1.5rem;
+  padding: 2.1875rem;
+}
+
+.visimisi .tentang_visimisi .visi_ .content .info{
+  width: 31.25rem;
+}
+
+.visimisi .tentang_visimisi .visi_ .content .info .title{
+  color: #D24C16;
+  font-size: 1.5rem;
+}
+
+.visimisi .misi_ .nav-tabs{
+  border: 1px solid #cdcdd8;
+}
+
+.visimisi .misi_ .nav-tabs .nav-item{
+  background: #f8f8f8;
+  border-radius: unset;
+  flex: 1;
+}
+
+.visimisi .misi_ .nav-tabs .nav-item .nav-link.active{
+  text-align: center;
+  background: #fff;
+  border: unset;
+  border-top: 6px solid #D24C16;
+  color: #111F86;
+  font-weight: 600;
+  height: 70px;
+  padding-top: 0.8rem;
+  font-size: 1.5rem;
+}
+
+.visimisi .misi_ .info {
+  width: 37.25rem;
+}
+
+.visimisi .misi_ .info .tab-pane{
+  color: #58595b;
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding: 1.8125rem 2.1875rem;
+}
+
+/* Kelebihan */
+
+.kelebihan #carousel__ .carousel-inner{
+  width: 1110px;
+  height: 448px;
+}
+
+.kelebihan #carousel__ .carousel-inner .carousel-item{
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+}
+
+.kelebihan #carousel__ .carousel-inner .carousel-item .carousel-caption h5{
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.kelebihan #carousel__ .carousel-inner .caption{
+  position: absolute;
+  bottom: 10px;
+}
+
+.kelebihan #carousel__ .carousel-inner .caption h1,
+.kelebihan #carousel__ .carousel-inner .caption p  {
+  color: #fff;
+}
+
+.kelebihan #carousel__ .carousel-inner .progress{
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: 100;
+}
+
+.kelebihan #carousel__ .carousel-inner .progress #length{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #bdd5ea;
+  z-index: 101;
+}
+
+.kelebihan #carousel__ .carousel-inner .progress #progress_animation{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #111F86;
+  z-index: 102;
+  animation: moving;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+
+@keyframes moving {
+  0%{
+    width: 0;
+  }
+  100%{
+    width: 100%;
+  }
+  
 }
 
 
@@ -420,10 +558,122 @@ header.navbar{
   padding-left: 0.5rem;
 }
 
+/* Unit Sekolah */
+
+
+  .unit .judul{
+    margin-top: 200px;
+    color: #000;
+  }
+
+  .unit .card_ {
+    padding-right: 0;
+    padding-left: 0;
+    margin-bottom: 200px;
+  }
+
+  .unit .card_ .card{
+    border-radius: 0;
+    border-style: none;
+  }
+
+  .unit .card_ .card .card-img{
+    width: 100%;
+    display: block;
+    width: 330px;
+    height: 500px;
+    border-radius: 0;
+    object-fit: cover;
+  }
+
+  .unit .card_ .card .card-img-overlay{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    border-radius: 0;
+    background: linear-gradient(rgba(255,255,255,0) 0%, rgba(0,0,0,0.3) 80%);
+    border-style: none;
+  }
+
+  .unit .card_ .card .card-img-overlay .text-deskripsi{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .unit .card_ .card .card-img-overlay .text-deskripsi h4,
+  .unit .card_ .card .card-img-overlay .text-deskripsi a{
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .unit .card_ .card .card-img-overlay .text-deskripsi a:hover{
+    text-decoration: underline;
+    color: #f5f5f5d7;
+  }
+  
+  .unit .card_ .card .card-img-overlay .text-deskripsi a span{  
+    padding-right: 0.5rem;
+  }
+
+
+  /* swiper slider */
+
+  .alumni{
+    position: relative;
+    height: 100%;
+  }
+
+  /* .alumni .swiper .swiper-judul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  } */
+
+  .alumni .swiper .swiper-judul .judul h3{
+    font-size: 1.5rem;
+  }
+
+  .alumni .swiper {
+    margin: 100px auto;
+    width: 320px;
+    height: 300px;
+  }
+
+  .alumni .swiper .swiper-wrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    box-sizing: content-box;
+  }
+
+  .alumni .swiper .swiper-slide {
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    height: 240px;
+  }
+
+  .alumni .swiper .swiper-slide img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+  }
+
 /* Kalender */
 
 :root {
     --primary-clr: #111F86;
+  }
+
+  .kalender{
+    margin-bottom: 5rem;
   }
 
   /* nice scroll bar */
@@ -450,7 +700,7 @@ header.navbar{
   } */
 
   #kalender{ 
-    background-color: #373c4f;
+    background-color: #e4e4e4;
     background-size: cover;
   }
 
@@ -476,7 +726,7 @@ header.navbar{
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
-    color: #878895;
+    color: #000;
     border-radius: 5px;
     background-color: #fff;
   }
@@ -574,7 +824,7 @@ header.navbar{
   }
   #kalender .calendar .days .prev-date,
   #kalender .calendar .days .next-date {
-    color: #b3b3b3;
+    color: #878895;
   }
   #kalender .calendar .days .active {
     position: relative;
@@ -686,13 +936,14 @@ header.navbar{
     text-transform: capitalize;
   }
   #kalender .right .today-date .event-day {
+    color: #000;
     font-size: 2rem;
     font-weight: 500;
   }
   #kalender .right .today-date .event-date {
     font-size: 1rem;
     font-weight: 400;
-    color: #878895;
+    color: #000;
   }
   #kalender .events {
     width: 100%;
@@ -801,7 +1052,7 @@ header.navbar{
     justify-content: center;
     font-size: 1.5rem;
     font-weight: 500;
-    color: #878895;
+    color: #000;
   }
   #kalender .add-event-wrapper {
     position: absolute;
@@ -1098,8 +1349,11 @@ header.navbar{
 .fasilitas,
 .prestasi,
 .visimisi,
+.kelebihan,
 .berita,
+.unit,
 .berita2,
+.kalender_table,
 #kontak{
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -1109,7 +1363,8 @@ header.navbar{
 .guru .container .row
 .fasilitas .container .row,
 .berita2 .container .row,
-.prestasi .container .row{
+.prestasi .container .row,
+.kalender_table .container .row{
     display: flex;
     flex-wrap: wrap;
 }
@@ -1304,6 +1559,39 @@ header.navbar{
 .karyawan .card-img-overlay .card-title span{
   font-size: 0.8rem;
   color: #111F86;
+}
+
+/* kalender_table */
+
+.kalender_table .event-container{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.kalender_table .event-container .event-item{
+  display: flex;
+  background: #e4e4eb;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.kalender_table .event-container .event-item .date-box{
+  background: #111F86;
+  color: #fff;
+  display: inline-block;
+  min-width: 150px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  text-align: center;
+  margin: 5px;
+}
+
+.kalender_table .event-container .event-item .content-box{
+  color: #111F86;
+  padding: 12px 24px;
+  font-size: 24px;
+  white-space: nowrap;
 }
 
 /* Footer */
@@ -1955,4 +2243,3 @@ footer .logo p{
 
 } */
 
-}
