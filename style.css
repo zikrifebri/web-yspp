@@ -1,4 +1,5 @@
 body{
+  /* max-width: 1440px; */
     /* font-size: 5.2rem; */
     /* font-family: "Poppins", serif; */
     /* min-height: 3000px; */
@@ -14,11 +15,11 @@ body{
 }
 
 
-.hero,.visimisi,.kelebihan,.berita,.unit,.kontak,footer{
+.hero,.visimisi,.kelebihan,.berita,.unit,.info,.alumni,.kontak,footer{
     font-family: "Poppins", serif;
 }
 
-.prestasi,.ekskul,.fasilitas,.banner,.timeline,.tab-tab,.pimpinan,.guru,.karyawan,.berita2,.kalender_table{
+.prestasi,.ekskul,.fasilitas,.banner,.timeline,.tab-tab,.pimpinan,.guru,.karyawan,.berita2,.kalender_table,.unit_fasilitas,.penjelasan_unit{
     font-family: "Poppins", serif;
 }
 
@@ -616,6 +617,18 @@ header.navbar{
     padding-right: 0.5rem;
   }
 
+  /* info */
+
+  .info .vertical-line{
+    position: absolute;
+    top: 10%;
+    right: 0;
+    width: 2px;
+    height: 80%;
+    background-color: #000;
+    z-index: 1;
+  }
+
 
   /* swiper slider */
 
@@ -674,6 +687,7 @@ header.navbar{
 
   .kalender{
     margin-bottom: 5rem;
+    padding-bottom: 5rem;
   }
 
   /* nice scroll bar */
@@ -1349,11 +1363,13 @@ header.navbar{
 .fasilitas,
 .prestasi,
 .visimisi,
+.unit_fasilitas,
 .kelebihan,
 .berita,
 .unit,
 .berita2,
 .kalender_table,
+.penjelasan_unit,
 #kontak{
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -1592,6 +1608,54 @@ header.navbar{
   padding: 12px 24px;
   font-size: 24px;
   white-space: nowrap;
+}
+
+/* Penjelasan Unit */
+
+.penjelasan_unit .gambar{
+  background: url(image/DSC01164.JPG);
+  background-size: cover;
+  max-height: 392px;
+  height: 392px;
+}
+
+.penjelasan_unit .ket_gambar{
+  background: #CE3827;
+}
+
+.penjelasan_unit .ket_gambar p{
+  color: #fff;
+  margin-bottom: 0px;
+  padding: 20px 24px 24px 20px;
+}
+
+.penjelasan_unit .ket{
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.penjelasan_unit .ket h1{
+  color: #000;
+}
+
+/* Unit Fasilitas */
+
+.unit_fasilitas #carousel-1{
+  height: 471px;
+}
+
+.unit_fasilitas #carousel-1 .carousel-inner .carousel-item img{
+  z-index: -1;
+}
+
+.unit_fasilitas #carousel-1 .carousel-inner .flex-fill{
+  padding-top: 0px;
+  padding-left: 24px;
+  padding-bottom: 24px;
+}
+
+.unit_fasilitas #carousel-1 .carousel-inner .flex-fill h1{
+  color: #fff; 
 }
 
 /* Footer */
