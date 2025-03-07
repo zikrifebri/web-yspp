@@ -129,6 +129,10 @@ header.navbar{
     transform: scaleX(1);
 }
 
+.hero #carousel-5{
+  height: 100vh;
+}
+
 #hero .carousel-item img{
     height: 930px;
 }
@@ -1613,14 +1617,9 @@ header.navbar{
 /* Penjelasan Unit */
 
 .penjelasan_unit .gambar{
-  background: url(image/DSC01164.JPG);
   background-size: cover;
   max-height: 392px;
   height: 392px;
-}
-
-.penjelasan_unit .ket_gambar{
-  background: #CE3827;
 }
 
 .penjelasan_unit .ket_gambar p{
@@ -1877,10 +1876,36 @@ footer .logo p{
   .navbar .navbar-bar .navbar-brand img{
     width: 100%;
   }
-
+  
   .hero{
-    height: 1500px;
+    height: 2065px;
+    width: 1055px;
   }
+
+  .hero #carousel-5{
+    height: 100%;
+  }
+
+  .hero .carousel-inner .carousel-item img{
+    object-fit: cover;
+  }
+
+  .hero .carousel-item .img1{
+    object-position: 55% center;
+  }
+
+  .hero .carousel-item .img3{
+    object-position: 50% center;
+  }
+
+  .hero .carousel-item .img4{
+    object-position: 60% center;
+  }
+
+  .hero .carousel-item .img5{
+    object-position: 23% center;
+  }
+
 
   .hero .hero_ .item{
     height: 1530px;
