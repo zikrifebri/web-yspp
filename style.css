@@ -273,6 +273,65 @@ header.navbar{
   background: #111F86;
 }
 
+.visimisi .badan .ucapan{
+  padding-top: 9rem;
+}
+
+.visimisi .badan .ucapan .ucapan-badan{
+  /* font-size: 1.1rem; */
+}
+
+.visimisi .badan .ucapan .ucapan-badan p{
+  color: #58595b;
+}
+
+.visimisi .badan .ucapan .ucapan-badan p span{
+  color: #000;
+}
+
+.visimisi .badan .ucapan .button_{
+  padding-top: 2rem;
+}
+
+.visimisi .badan .ucapan .button_ a{
+  position: relative;
+  display: inline-block;
+  font-size: 1rem;
+  letter-spacing: -0.5px;
+  color: #0d6efd;
+  text-decoration: none;
+  border: 1px solid #0d6efd;
+  padding: 0.7rem 1.2rem;
+  z-index: 1;
+  transition: 1s;
+  overflow: hidden;
+}
+
+.visimisi .badan .ucapan .button_ a:hover{
+  color: #fff;
+}
+
+.visimisi .badan .ucapan .button_ a::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -2%;
+  width: 0;
+  height: 100%;
+  background: #0d6efd;
+  transform: skewX(35deg);
+  z-index: -1;
+  transition: 1s;
+}
+
+.visimisi .badan .ucapan .button_ a:hover:before{
+  width: 100%;
+}
+
+.visimisi .badan .ucapan .button_ span{
+  letter-spacing: -0.5px;
+}
+
 .visimisi .tentang_visimisi{
   border: 0.0625rem solid #eaeaea;
   border-radius: 1rem;
@@ -1959,7 +2018,6 @@ footer .logo p{
   }
 
   .visimisi{
-    height: 1500px;
     padding-top: 7rem;
     padding-left: 5rem;
     padding-right: 3rem;
@@ -1983,6 +2041,14 @@ footer .logo p{
   .visimisi .badan p,
   .visimisi .badan li{
     font-size: 1.5rem;
+  }
+
+  .kelebihan #carousel__ .carousel-inner .carousel-item .caption{
+    padding-left: 5rem !important;
+  }
+
+  .kelebihan #carousel__ .carousel-inner .carousel-item img{
+    height: 100%;
   }
 
   #berita{
