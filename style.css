@@ -278,7 +278,9 @@ header.navbar{
 }
 
 .visimisi .badan .ucapan .ucapan-badan{
-  /* font-size: 1.1rem; */
+  text-align: justify;
+  width: 90%;
+  /* text-indent: 2em; */
 }
 
 .visimisi .badan .ucapan .ucapan-badan p{
@@ -648,6 +650,7 @@ header.navbar{
     height: 500px;
     border-radius: 0;
     object-fit: cover;
+    object-position: 30% center;
   }
 
   .unit .card_ .card .card-img-overlay{
@@ -2030,6 +2033,16 @@ footer .logo p{
     left: 60%;
   }
 
+  .visimisi .badan .ucapan .ucapan-badan{
+    width: 95%;
+  }
+
+  .visimisi .tentang_visimisi .visi_ .content .info,
+  .visimisi .misi_ .info {
+    width: 90%;
+    text-align: justify;
+  }
+
   .visimisi .badan h2{
     font-size: 3rem;
   }
@@ -2085,24 +2098,64 @@ footer .logo p{
     margin-bottom: 2.5rem !important;
   }
 
-  .berita #berita-tab-pane .card .card-img-overlay p small{
-    font-size: 1rem;
+  .berita #berita-tab-pane .card_img{
+    margin-top: 2rem;
+    margin-left: 6.5rem;
+    width: 80%;
   }
 
-  .berita #berita-tab-pane .card .card-img-overlay .card-title{
+  .berita #berita-tab-pane .card .card-img-overlay{
+    top: 340px;
+    left: 30px;
+  }
+
+  .berita #berita-tab-pane .card .card-img-overlay p small{
     font-size: 1.5rem;
   }
 
+  .berita #berita-tab-pane .card .card-img-overlay .card-title{
+    font-size: 2rem;
+  }
+
+  .berita #berita-tab-pane .card-sub{
+    margin-left: 6.5rem;
+  }
+
   .berita #berita-tab-pane .card .card_kanan{
-    height: 300px;
+    width: 775.95px;
+    height: 498.52px;
   }
 
   .berita #berita-tab-pane .card .card_kanan .card_img_kanan{
-    height: 150px;
+    height: 200px;
   }
 
   .berita #berita-tab-pane .card .card_kanan .card_img_kanan img{
-    height: 305px;
+    width: 775.95px;
+    height: 498.52px;
+    object-fit: cover;
+  }
+
+  .berita #berita-tab-pane .card-sub .card-body{
+    padding-top: 4rem;
+    width: 90%;
+  }
+
+  .unit .judul{
+    font-size: 3rem !important;
+    width: 75%;
+    padding-bottom: 3rem;
+  }
+
+  .unit .card_ .card{
+    width: 1060px;
+    height: 1250px;
+  }
+
+  .unit .card_ .card .card-img{
+    object-position: 30% center;
+    width: 100%;
+    height: 100%;
   }
 
   .kontak {
