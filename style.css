@@ -1483,6 +1483,14 @@ header.navbar{
     margin-top: 0.5rem;
 }
 
+.pimpinan .guru .card .card-info .nama{
+  font-size: 1.15rem;
+}
+
+.pimpinan .guru .card .card-info .jabatan{
+  font-size: 0.95rem;
+}
+
 /* Guru */
 .guru,
 .karyawan{
@@ -1707,6 +1715,7 @@ header.navbar{
 
 .unit_fasilitas #carousel-1 .carousel-inner .carousel-item img{
   z-index: -1;
+  object-fit: cover;
 }
 
 .unit_fasilitas #carousel-1 .carousel-inner .flex-fill{
@@ -2156,6 +2165,23 @@ footer .logo p{
     object-position: 30% center;
     width: 100%;
     height: 100%;
+  }
+
+  .unit .card_ .card .card-img-overlay .text-deskripsi{
+    padding-bottom: 3rem;
+  }
+
+  .unit .card_ .card .card-img-overlay .text-deskripsi h4{
+    padding-left: 2rem;
+  }
+
+  .unit .card_ .card .card-img-overlay .text-deskripsi a{
+    padding-right: 2rem;
+  }
+
+  .unit .card_ .card .card-img-overlay .text-deskripsi h4,
+  .unit .card_ .card .card-img-overlay .text-deskripsi a{
+    font-size: 2.3rem !important;
   }
 
   .kontak {
