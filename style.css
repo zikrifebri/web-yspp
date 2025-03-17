@@ -2223,6 +2223,21 @@ footer .logo p{
     font-size: 1.5rem;
   }
 
+  .kontak-wa {
+    width: 150px !important;
+    border-radius: 55px 0 0 55px !important;
+  }
+
+  .kontak-wa div{
+    margin-top: 45px !important;
+    margin-bottom: 45px !important;
+    margin-left: 28px !important;
+  }
+
+  .kontak-wa a img{
+    width: 90px !important;
+  }
+
   footer .widget-area-footer{
     padding: 3rem;
   }
