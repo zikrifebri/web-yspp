@@ -685,6 +685,17 @@ header.navbar{
 
   /* info */
 
+  #info{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .info .badan h1{
+    /* font-size: 2rem; */
+    padding-top: 1rem;
+    color: #111F86;
+  }
+
   .info .vertical-line{
     position: absolute;
     top: 10%;
@@ -715,6 +726,7 @@ header.navbar{
 
   .alumni .swiper {
     margin: 100px auto;
+    margin-top: 50px;
     width: 320px;
     height: 300px;
   }
@@ -1436,6 +1448,7 @@ header.navbar{
 .berita2,
 .kalender_table,
 .penjelasan_unit,
+.alumni,
 #kontak{
     padding-top: 5rem;
     padding-bottom: 5rem;
