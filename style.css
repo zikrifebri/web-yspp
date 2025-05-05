@@ -19,7 +19,7 @@ body{
     font-family: "Poppins", serif;
 }
 
-.prestasi,.ekskul,.fasilitas,.banner,.timeline,.tab-tab,.pimpinan,.guru,.karyawan,.berita2,.kalender_table,.unit_fasilitas,.penjelasan_unit{
+.ppdb,.prestasi,.ekskul,.fasilitas,.banner,.timeline,.tab-tab,.pimpinan,.guru,.karyawan,.berita2,.kalender_table,.unit_fasilitas,.penjelasan_unit{
     font-family: "Poppins", serif;
 }
 
@@ -1443,6 +1443,7 @@ header.navbar{
 .visimisi,
 .unit_fasilitas,
 .kelebihan,
+.ppdb,
 .berita,
 .unit,
 .berita2,
