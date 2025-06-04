@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Swipper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>  
+    <title>PPDB - Yayasan Sosial Pendidikan Pusri</title>
+</head>
+<body>
+
+    <header class="navbar fixed-top">
+    <div class="header">
+        <div class="container">
+            <div class="navbar-top">
+                <div class="navbar-top-left">
+                    <i class="bi bi-telephone-fill"></i>
+                    <a href="#">(0711) 720544</a>
+                </div>
+                <div class="navbar-top-right">
+                    <a href="https://www.instagram.com/ysppusri/"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.youtube.com/@ysppusri3876"><i class="bi bi-youtube"></i></a>
+                    <a href="https://www.tiktok.com/@ysp_pusri?_t=ZS-8uko0Wp3psF&_r=1"><i class="bi bi-tiktok"></i></a>
+                    <a href="https://www.facebook.com/ysp.pusri"><i class="bi bi-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="border-bottom"></div>
+    <div class="container navbar-bar">
+        <div class="navbar-bottom">
+            <nav class="navbar navbar-expand-lg bg-transparent mynavbar">
+                <div class="container">
+                  <a class="navbar-brand" href="index.html">
+                    <img src="image/Logo5.png" alt="YSPP" width="45%">
+                  </a>
+                  <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                      <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                      <div class="navbar-nav ms-auto">
+                        <li class="nav-item dropdown">
+                          <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Profil</a>
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="profil/sejarah.html">Sejarah</a></li>
+                            <!-- <li><a class="dropdown-item" href="#">Visi & Misi</a></li> -->
+                            <li><a class="dropdown-item" href="profil/pimpinan.html">Struktur Organisasi</a></li>
+                            <li><a class="dropdown-item" href="profil/karyawan.html">Karyawan</a></li>
+                            <!-- <li><a class="dropdown-item" href="profil/guru.html">Guru</a></li> -->
+                          </ul>
+                        </li>
+                        <a class="nav-link" href="#">PPDB</a>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Prestasi</a>
+                          <ul class="dropdown-menu">
+                            <!-- <li><a class="dropdown-item" href="peserta_didik/ekskul.html">Ekstrakulikuler</a></li> -->
+                            <li><a class="dropdown-item" href="prestasi/tk_prestasi.html">TK</a></li>
+                            <li><a class="dropdown-item" href="prestasi/sd_prestasi.html">SD</a></li>
+                            <li><a class="dropdown-item" href="prestasi/smp_prestasi.html">SMP</a></li>
+                            <li><a class="dropdown-item" href="prestasi/sma_prestasi.html">SMA</a></li>
+                          </ul>
+                        </li>
+                        <a class="nav-link" href="fasilitas.html">Fasilitas</a>
+                        <a class="nav-link" href="berita.html">Berita</a>
+                        <a class="nav-link" href="kalender.html">Kalender</a>
+                        <a class="nav-link" href="faq.html">FAQ</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+        </div>
+    </div>
+    </header>
+
+    <div class="banner">
+        <div class="d-flex justify-content-center align-items-end text-center">
+            <div class="container">
+                  <div class="banner-content">
+                      <h1 class="text-white">Pendaftaran Peserta Didik Baru</h1>
+                      <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                          <ol class="breadcrumb">
+                              <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                              <li class="breadcrumb-item" aria-current="page">PPDB</li>
+                          </ol>
+                      </nav>
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jadwal Pendaftaran -->
+    <!-- <section class="jadwal bg-light" id="jadwal">
+        <div class="container">
+        <h2 class="mb-4 text-center text-primary">Jadwal Pendaftaran</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+            <thead class="table-primary">
+                <tr>
+                <th>Jenjang</th>
+                <th>Tanggal Pembukaan</th>
+                <th>Penutupan</th>
+                <th>Ujian / Seleksi</th>
+                <th>Pengumuman</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <td>TK</td>
+                <td>1 Juni 2025</td>
+                <td>30 Juni 2025</td>
+                <td>-</td>
+                <td>5 Juli 2025</td>
+                </tr>
+                <tr>
+                <td>SD</td>
+                <td>1 Juni 2025</td>
+                <td>30 Juni 2025</td>
+                <td>3 Juli 2025</td>
+                <td>5 Juli 2025</td>
+                </tr>
+                <tr>
+                <td>SMP</td>
+                <td>1 Juni 2025</td>
+                <td>25 Juni 2025</td>
+                <td>27 Juni 2025</td>
+                <td>1 Juli 2025</td>
+                </tr>
+                <tr>
+                <td>SMA</td>
+                <td>1 Juni 2025</td>
+                <td>25 Juni 2025</td>
+                <td>27 Juni 2025</td>
+                <td>1 Juli 2025</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+        </div>
+    </section> -->
+    <section id="jadwal" class="jadwal">
+        <div class="container">
+            <div class="row mt-4">
+                <div class="col-md-12">
+                    <h1 class="judul display-4 fs-2 fw-semibold">Jadwal Pendaftaran YSPP</h1>
+                </div>
+            </div>
+            <div class="row my-5">
+                <div class="col-md-12">
+                    <!-- Gelombang 1 -->
+                    <div class="d-flex flex-row mb-5">
+                        <div>
+                            <div>
+                                <h1 class="angka display-4 fs-2 fw-semibold">01</h1>
+                            </div>
+                        </div>
+                        <div class="ps-4">
+                            <div>
+                                <h1 class="subjudul display-4 fs-2 fw-semibold">Gelombang 1</h1>
+                            </div>
+                            <div class="isi mt-3">
+                                <p class="subisi fs-5 fw-light">
+                                    Dimulai tanggal 01 Oktober 2025 s.d 31 Desember 2025
+                                    <br>
+                                    Dapatkan Potongan Biaya PPDB :
+                                    <br>
+                                    - TK Rp. 1.000.000
+                                    <br>
+                                    - SD Rp. 1.500.000
+                                    <br>
+                                    - SMP Rp. 1.500.000
+                                    <br>
+                                    - SMA Rp. 2.000.000 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Gelombang 2 -->
+                    <div class="d-flex flex-row mb-5">
+                        <div>
+                            <div>
+                                <h1 class="angka display-4 fs-2 fw-semibold">02</h1>
+                            </div>
+                        </div>
+                        <div class="ps-4">
+                            <div>
+                                <h1 class="subjudul display-4 fs-2 fw-semibold">Gelombang 2</h1>
+                            </div>
+                            <div class="isi mt-3">
+                                <p class="subisi fs-5 fw-light">
+                                    Dimulai tanggal 01 Januari 2025 s.d 31 Maret 2026
+                                    <br>
+                                    Dapatkan Potongan Biaya PPDB :
+                                    <br>
+                                    - TK Rp. 500.000
+                                    <br>
+                                    - SD Rp. 1.000.000
+                                    <br>
+                                    - SMP Rp. 1.000.000
+                                    <br>
+                                    - SMA Rp. 1.500.000 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Gelombang 3 -->
+                    <div class="d-flex flex-row mb-5">
+                        <div>
+                            <div>
+                                <h1 class="angka display-4 fs-2 fw-semibold">03</h1>
+                            </div>
+                        </div>
+                        <div class="ps-4">
+                            <div>
+                                <h1 class="subjudul display-4 fs-2 fw-semibold">Gelombang 3</h1>
+                            </div>
+                            <div class="isi mt-3">
+                                <p class="subisi fs-5 fw-light">
+                                    Dimulai tanggal 01 April 2026 s.d 31 Juni 2026
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jalur Pendaftaran / Alur -->
+    <!-- <section class="alur_ppdb py-5 bg-light" id="alur">
+        <div class="container">
+          <h2 class="text-center mb-4">Alur Pendaftaran PPDB</h2>
+          <div class="timeline">
+            <div class="timeline-step">
+              <h5><i class="bi bi-credit-card timeline-icon"></i>1. Melakukan Pembayaran Formulir</h5>
+              <p>Calon peserta melakukan pembayaran biaya formulir pendaftaran melalui transfer ke rekening sekolah.</p>
+            </div>
+            <div class="timeline-step">
+              <h5><i class="bi bi-upc-scan timeline-icon"></i>2. Scan Barcode & Upload Bukti</h5>
+              <p>Scan barcode pembayaran dan unggah bukti transfer melalui sistem pendaftaran online.</p>
+            </div>
+            <div class="timeline-step">
+              <h5><i class="bi bi-envelope-check timeline-icon"></i>3. Notifikasi & Formulir Biodata</h5>
+              <p>Peserta akan menerima notifikasi melalui email/WA berupa kwitansi dan tautan untuk mengisi formulir biodata.</p>
+            </div>
+            <div class="timeline-step">
+              <h5><i class="bi bi-bank timeline-icon"></i>4. Pembayaran PPDB</h5>
+              <p>Setelah mengisi formulir, peserta membayar biaya PPDB melalui m-banking atau setor tunai ke Bank Mandiri.</p>
+            </div>
+            <div class="timeline-step">
+              <h5><i class="bi bi-receipt timeline-icon"></i>5. Upload Bukti Pembayaran PPDB</h5>
+              <p>Scan barcode dan unggah bukti pembayaran PPDB ke sistem.</p>
+            </div>
+            <div class="timeline-step">
+              <h5><i class="bi bi-check2-square timeline-icon"></i>6. Notifikasi Kwitansi PPDB</h5>
+              <p>Peserta akan mendapatkan kwitansi resmi PPDB melalui email/WA.</p>
+            </div>
+            <div class="timeline-step">
+              <h5><i class="bi bi-person-lines-fill timeline-icon"></i>7. Serahkan Kwitansi untuk Pembukuan Seragam</h5>
+              <p>Calon siswa membawa kwitansi PPDB sebagai bukti untuk proses pembukuan pengambilan seragam sekolah.</p>
+            </div>
+          </div>
+        </div>
+    </section> -->
+
+    <section class="alur_ppdb py-5 bg-light" id="alur">
+        <div class="container">
+          <h2 class="mb-4 text-center">Alur Pendaftaran PPDB</h2>
+          <div class="step-track" id="step-container">
+            <div class="card step-card">
+              <div class="card-body">
+                <h6><i class="bi bi-credit-card icon"></i> 1. Bayar Formulir</h6>
+                <p>Pembayaran biaya formulir ke rekening YSPP.</p>
+              </div>
+            </div>
+            <div class="card step-card">
+              <div class="card-body">
+                <h6><i class="bi bi-upc-scan icon"></i> 2. Scan & Upload Bukti</h6>
+                <p>Scan barcode dan unggah bukti pembayaran formulir.</p>
+              </div>
+            </div>
+            <div class="card step-card">
+              <div class="card-body">
+                <h6><i class="bi bi-envelope-check icon"></i> 3. Notifikasi & Formulir</h6>
+                <p>Kwitansi dan link formulir biodata dikirim via email/WA.</p>
+              </div>
+            </div>
+            <div class="card step-card">
+              <div class="card-body">
+                <h6><i class="bi bi-bank icon"></i> 4. Pembayaran PPDB</h6>
+                <p>Pembayaran PPDB melalui m-banking/setoran bank mandiri.</p>
+              </div>
+            </div>
+            <div class="card step-card">
+              <div class="card-body">
+                <h6><i class="bi bi-receipt icon"></i> 5. Scan & Upload Bukti</h6>
+                <p>Scan barcode & unggah bukti pembayaran PPDB.</p>
+              </div>
+            </div>
+            <div class="card step-card">
+              <div class="card-body">
+                <h6><i class="bi bi-check2-square icon"></i> 6. Notifikasi Kwitansi</h6>
+                <p>Kwitansi pembayaran PPDB resmi dikirim via email/WA.</p>
+              </div>
+            </div>
+            <div class="card step-card">
+              <div class="card-body">
+                <h6><i class="bi bi-person-lines-fill icon"></i> 7. Membawa Kwitansi</h6>
+                <p>Kwitansi PPDB dibawa ke kantor YSPP untuk pengukuran seragam.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- Syarat & Ketentuan -->
+    <section class="syarat" id="syarat">
+        <div class="container">
+        <h2 class="judul mb-4 text-left">Syarat & Ketentuan</h2>
+        <div class="accordion mt-5" id="accordionSyarat">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTK">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTK">
+                    TK
+                    </button>
+                </h2>
+                <div id="collapseTK" class="accordion-collapse collapse show" data-bs-parent="#accordionSyarat">
+                    <div class="accordion-body">
+                    <ul>
+                        <li>Mengumpulkan formulir pendaftaran</li>
+                        <li>Fotokopi akta kelahiran (1 lembar)</li>
+                        <li>Fotokopi kartu keluarga (1 lembar)</li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSD">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSD">
+                    SD
+                    </button>
+                </h2>
+                <div id="collapseSD" class="accordion-collapse collapse" data-bs-parent="#accordionSyarat">
+                    <div class="accordion-body">
+                    <ul>
+                        <li>Fotokopi akta kelahiran dan Kartu Keluarga</li>
+                        <li>Pas Foto 3x4 dan 2x3 (3 lembar)</li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSMP">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSMP">
+                    SMP
+                    </button>
+                </h2>
+                <div id="collapseSMP" class="accordion-collapse collapse" data-bs-parent="#accordionSyarat">
+                    <div class="accordion-body">
+                    <ul>
+                        <li>Fotokopi raport kelas 4 s.d 6 semester 1 dan 2</li>
+                        <li>Pas foto 3x4 (3 lembar) dan 2x3 (3 lembar)</li>
+                        <li>Fotokopi akta kelahiran</li>
+                        <li>Fotokopi kartu keluarga</li>
+                        <li>Materai 10.000 (1 lembar)</li>
+                        <li>Fotokopi sertifikat akademik, non akademik, dan tahfidz (jika ada)</li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSMA">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSMA">
+                    SMA
+                    </button>
+                </h2>
+                <div id="collapseSMA" class="accordion-collapse collapse" data-bs-parent="#accordionSyarat">
+                    <div class="accordion-body">
+                    <ul>
+                        <li>Lulusan SMP atau sederajat</li>
+                        <li>Fotokopi ijazah & SKHUN</li>
+                        <li>Nilai rapor kelas 7–9</li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section id="unduhan" class="unduhan">
+        <div class="container">
+            <div class="row mb-4 pb-4">
+                <div class="col-md 12">
+                    <h1 class="fs-2 fw-semibold">
+                        Unduhan
+                    </h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="isi">
+                                <h4 class="fs-4">Brosur Sekolah</h4>
+                                <p class="fs-5 pb-4 fw-light">Temukan Informasi Lebih Lanjut, <br> dan Fasilitas Kami </p>
+                                <a href="#">
+                                    <button type="button" class="tombol btn btn-primary">
+                                        <i class="bi bi-download"></i> Unduh Brosur
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontak" class="kontak">
+      <div class="container">
+        <div class="row mb-4">
+          <div class="col">
+            <h2>Hubungi Kami</h2>
+          </div>
+        </div>
+
+        <div class="row pb-5">
+          <div class="col-md-4">
+            <table class="table table-hover table-bordered">
+                <tr>
+                  <td scope="row">
+                    <i class="bi bi-geo-alt">
+                      <a href="https://maps.app.goo.gl/diwhD1dX2jKETVpV8" class="ms-3" target="_blank">
+                      Jln. Mayor Zen, Sei Selincah Kalidoni Palembang
+                      </a>
+                    </i>
+                  </td>
+                </tr>
+                <tr>
+                  <td scope="row">
+                    <i class="bi bi-telephone">
+                      <a href="#" class="ms-3" target="_blank">
+                      (0711)720544
+                      </a>
+                    </i>
+                  </td>
+                </tr>
+                <tr>
+                  <td scope="row">
+                    <i class="bi bi-envelope">
+                      <a href="https://mail.google.com/mail/#inbox?compose=jrjtXFCKppPVhMQxtqtkDlsFccVRwGjDggCBtpMtcvhxsFVKslvSFJGkNlzWPJrmwHtwpHhW"  class="ms-3" target="_blank">
+                      ysppusri@gmail.com
+                      </a>
+                    </i>
+                  </td>
+                </tr>
+                <tr>
+                  <td scope="row">
+                    <i class="bi bi-clock-history">
+                        <span class="ms-3">
+                          Senin - Jumat : 07.30 - 16.30
+                        </span>
+                    </i>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="col-md-8">
+            <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
+              <strong>Terima Kasih..</strong> Pesan Anda Telah Dikirimkan.
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <form id="my-form" method="POST" action="https://script.google.com/macros/s/AKfycby4ppO6-PN88lNmH22U8NksRABkLerbwTkM5UI1RMC6qzGT_Iv5y3NkUryYpn3p-LDMgQ/exec">
+              <div class="mb-3">
+                <label for="tujuan" class="form-label">Tujuan</label>
+                <select name="Tujuan" id="tujuan" class="form-select">
+                  <option selected value="TK">TK Pusri</option>
+                  <option value="SD">SD Pusri</option>
+                  <option value="SMP">SMP Pusri</option>
+                  <option value="SMA">SMA Pusri</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="name" class="form-label">Nama Lengkap</label>
+                <input type="text" class="form-control" id="name" name="Nama" aria-describedby="name">
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="Email" aria-describedby="email">
+              </div>
+              <div class="mb-3">
+                <label for="number" class="form-label">Nomor HP / Whatsapp</label>
+                <input type="text" class="form-control" id="number" name="Nomor" aria-describedby="number">
+              </div>
+              <div class="mb-3">
+                <label for="pesan" class="form-label">Pesan</label>
+                <textarea class="form-control" id="pesan" name="Pesan" rows="3"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-outline-primary btn-kirim">Kirim</button>
+              <div class="spinner-border text-primary btn-loading d-none" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="kontak-wa d-flex flex-column" style="position: fixed; top: 90%; right: 0px; transform: translateY(-50%); background-color: #fff; z-index: 5; width: 57px; border-radius: 25px 0 0 25px; box-shadow: 0 0 10px;">
+        <div style="margin-left: 13px; margin-top: 23px; margin-bottom: 23px;">
+          <a href="https://api.whatsapp.com/send?phone=628117399690" target="_blank">
+            <img src="image/whatsapp-logo.png" width="40" height="40" alt="wa" style="width: 40px; height: auto;">
+          </a> 
+        </div>
+    </div>
+  
+    <footer class="text-white text-center p-3">
+        <div class="container">
+          <div class="widget-area-footer">
+            <div class="row">
+              <div class="kontak col-md-4">
+                <h4>Hubungi Kami</h4>
+                <ul class="px-0 py-2">
+                  <li class="py-1">
+                    <i class="bi bi-geo-alt">
+                      <a href="https://maps.app.goo.gl/diwhD1dX2jKETVpV8" class="ms-3" target="_blank">
+                      Jln. Mayor Zen, Sei Selincah  Kalidoni Palembang
+                      </a>
+                    </i>
+                  </li>
+                  <li class="py-1">
+                    <i class="bi bi-telephone">
+                      <a href="#" class="ms-3" target="_blank">
+                      0711-720544
+                      </a>
+                    </i>
+                  </li>
+                  <li class="py-1">
+                    <i class="bi bi-envelope">
+                      <a href="https://mail.google.com/mail/#inbox?compose=jrjtXFCKppPVhMQxtqtkDlsFccVRwGjDggCBtpMtcvhxsFVKslvSFJGkNlzWPJrmwHtwpHhW" class="ms-3" target="_blank">
+                      ysppusri@gmail.com
+                      </a>
+                    </i>
+                  </li>
+                  <li class="py-1">
+                    <i class="bi bi-clock-history">
+                      <span class="ms-3">
+                        Senin - Jumat : 07.30 - 16.30
+                      </span>
+                    </i>
+                  </li>
+                </ul>
+              </div>
+  
+              <div class="info col-md-3">
+                <h4>Info Sekolah</h4>
+                <ul class="px-0 py-2">
+                  <li class="py-1">
+                    <a href="https://dapo.kemdikbud.go.id/sekolah/213D7EF14EBC252A5488" target="_blank">
+                      Sekolah Menengah Atas 
+                    </a>
+                  </li>
+                  <li class="py-1">
+                    <a href="https://dapo.kemdikbud.go.id/sekolah/E354B714E4438CF5DE15" target="_blank">
+                      Sekolah Menengah Pertama
+                    </a>
+                  </li>
+                  <li class="py-1">
+                    <a href="https://dapo.kemdikbud.go.id/sekolah/D5E5F94FF4DAD00470A6" target="_blank">
+                      Sekolah Dasar
+                    </a>
+                  </li>
+                  <li class="py-1">
+                    <a href="https://dapo.kemdikbud.go.id/sekolah/16EF024FBBB7809921A6" target="_blank">
+                      Taman Kanak - Kanak
+                    </a>
+                  </li>
+                </ul>
+              </div>
+  
+              <div class="logo col-md-5">
+                <p>
+                  <img src="image/Logo5.png" alt="logo" width="100%">
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border-bottom m-auto p-2"></div>
+        <div class="copyright-socialmedia">
+          <a href="https://www.instagram.com/ysppusri/" target="_blank" class="me-3 justify-content-center text-center text-white"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.youtube.com/@ysppusri3876" target="_blank" class="me-3 justify-content-center text-center text-white"><i class="bi bi-youtube"></i></a>
+          <a href="https://www.tiktok.com/@ysp_pusri?_t=ZS-8uko0Wp3psF&_r=1" target="_blank" class="me-3 justify-content-center text-center text-white"><i class="bi bi-tiktok"></i></a>
+          <a href="https://www.facebook.com/ysp.pusri" target="_blank" class="me-3 justify-content-center text-center text-white"><i class="bi bi-facebook"></i></a>
+          <p class="pt-2">Copyright ©️ 2025 Yayasan Sosial Pendidikan Pusri, All Right Reserved</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- <script>
+        // Animasi scroll timeline
+        const steps = document.querySelectorAll('.timeline-step');
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        }, {
+          threshold: 0.1
+        });
+        steps.forEach(step => observer.observe(step));
+    </script> -->
+    
+    <script>
+    function isElementInViewport(el) {
+      const rect = el.getBoundingClientRect();
+      return (
+        rect.top <= (window.innerHeight || document.documentElement.clientHeight)
+      );
+    }
+
+    function revealSteps() {
+      const stepContainer = document.getElementById('step-container');
+      const steps = document.querySelectorAll('.step-card');
+      if (isElementInViewport(stepContainer) && !stepContainer.classList.contains('animated')) {
+        stepContainer.classList.add('animated');
+        steps.forEach((step, index) => {
+          setTimeout(() => {
+            step.classList.add('visible');
+          }, index * 1500);
+        });
+      }
+    }
+
+    document.addEventListener('scroll', revealSteps);
+    window.addEventListener('load', revealSteps);
+    </script>
+
+</body>
+</html>

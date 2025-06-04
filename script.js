@@ -93,6 +93,107 @@ window.addEventListener("load", function() {
 
 // swiper slider
 
+// floating menu
+
+  // document.addEventListener("DOMContentLoaded", () => {
+  //   const buttons = document.querySelectorAll(".yspp-floating-menu .action");
+
+  //   buttons.forEach((btn) => {
+  //     btn.addEventListener("click", () => {
+  //       buttons.forEach(b => {
+  //         b.style.backgroundColor = "#fff";
+  //         b.style.color = "#111F86";
+  //         b.querySelector('.title').style.color = '#111F86';
+  //         b.querySelector('.icon').style.color = '#111F86';
+          
+  //       });
+  //       btn.style.backgroundColor = "#111F86";
+  //       btn.style.color = "#fff";
+  //       btn.querySelector('.title').style.color = '#fff';
+  //       btn.querySelector('.icon').style.color = '#fff';
+  //     });
+  //   });
+  // });
+
+  // Highlight floating menu on scroll
+  window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('section[id]');
+    const scrollY = window.scrollY;
+    const offset = 150;
+  
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - offset;
+      const sectionHeight = section.offsetHeight;
+      const sectionId = section.getAttribute('id');
+      const button = document.querySelector(`.yspp-floating-menu .action[href="#${sectionId}"]`);
+  
+      if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+        document.querySelectorAll('.yspp-floating-menu .action').forEach(btn => {
+          btn.style.backgroundColor = '#fff';
+          btn.style.color = '#111F86';
+  
+          const icon = btn.querySelector('i');
+          const title = btn.querySelector('.title');
+          if (icon) icon.style.color = '#111F86';
+          if (title) title.style.color = '#111F86';
+        });
+  
+        if (button) {
+          button.style.backgroundColor = '#111F86';
+          button.style.color = '#fff';
+  
+          const icon = button.querySelector('i');
+          const title = button.querySelector('.title');
+          if (icon) icon.style.color = '#fff';
+          if (title) title.style.color = '#fff';
+        }
+      }
+    });
+  });
+  
+// hamburger menu mobile
+
+const navbarNav = document.querySelector('.yspp-navbar__bottom-menu');
+
+document.querySelector('#hamburger-menu').onclick = () => {
+  navbarNav.classList.toggle('active');
+};
+
+// klik luar sidebar
+
+const hamburger = document.querySelector('#hamburger-menu');
+const toggleIcon = document.querySelector('#toggleIcon');
+
+hamburger.addEventListener('click', () => {
+  toggleIcon.classList.toggle('bi-list');
+  toggleIcon.classList.toggle('bi-x');
+});
+
+document.addEventListener('click', function (e) {
+  const isClickInside = hamburger.contains(e.target) || navbarNav.contains(e.target);
+  if (!isClickInside && toggleIcon.classList.contains('bi-x')) {
+    toggleIcon.classList.remove('bi-x');
+    toggleIcon.classList.add('bi-list');
+    navbarNav.classList.remove('active');
+  }
+});
+
+// document.addEventListener('click', function(e) {
+//   if (!hamburger.contains(e.target) && !navbarNav.contains(e.target)){
+//     navbarNav.classList.remove('active');
+//     isToggled = !isToggled;
+//     toggleIcon.className = isToggled ? 'bi bi-x' : 'bi bi-list';
+//   }
+// });
+
+
+
+// hamburger.addEventListener('click', function(e) {
+//   isToggled = !isToggled;
+//   toggleIcon.className = isToggled ? 'bi bi-x' : 'bi bi-list';
+// });
+
+
 
 
 //   Kalender
