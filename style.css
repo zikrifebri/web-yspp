@@ -1821,6 +1821,9 @@ header.navbar{
 .unit_kegiatan #carousel-1 .carousel-inner .carousel-item img{
   z-index: -1;
   object-fit: cover;
+  background-image: url(image/default-image.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .unit_fasilitas #carousel-2 .carousel-inner .carousel-item img{
@@ -1872,6 +1875,12 @@ header.navbar{
   color: #fff;
 }
 
+.menuju_ppdb .tombol a.atas:hover{
+  background-color: #D24C16;
+  border: 1px solid;
+  border-color: #fff;
+}
+
 .menuju_ppdb .tombol a.bawah{
   border-color: #fff;
   text-decoration: none;
@@ -1886,6 +1895,7 @@ header.navbar{
 .menuju_ppdb .tombol a i{
   padding-left: 0.5rem;
 }
+
 
 .faq .judul{
   text-align: left;
@@ -2051,6 +2061,15 @@ header.navbar{
 .unduhan .card .isi button{
   border-style: none;
   background: #111F86;
+}
+
+.unduhan .card .CP{
+  padding-top: 6rem;
+}
+
+.unduhan .card .CP span,
+.unduhan .card .CP a{
+  font-size: 1.2rem;
 }
 
 /* artikel prestasi */
