@@ -2063,12 +2063,12 @@ header.navbar{
   background: #111F86;
 }
 
-.unduhan .card .CP{
-  padding-top: 6rem;
+.unduhan .card .isi_cp{
+  padding:  5rem 4rem 5rem;
 }
 
-.unduhan .card .CP span,
-.unduhan .card .CP a{
+.unduhan .card .isi_cp span,
+.unduhan .card .isi_cp a{
   font-size: 1.2rem;
 }
 
