@@ -1345,6 +1345,7 @@ header.navbar{
 
 .banner .banner-content{
     margin-left: 2rem;
+    text-shadow: 1px 1px 10px #000;
 }
 
 .banner h1{
@@ -1785,7 +1786,7 @@ header.navbar{
 .penjelasan_unit .gambar,
 .penjelasan_guru .gambar{
   background-size: cover;
-  max-height: 392px;
+  /* max-height: 392px; */
   height: 392px;
 }
 
@@ -2745,6 +2746,16 @@ footer .logo p{
   footer .copyright-socialmedia p{
     padding-top: 1.5rem !important;
     font-size: 1.4rem;
+  }
+
+  .penjelasan_unit .gambar,
+  .penjelasan_guru .gambar{
+    height: 650px;
+  }
+
+  .banner{
+    height: 800px;
+    width: 1050px;
   }
 
 }
