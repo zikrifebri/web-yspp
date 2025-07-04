@@ -23,7 +23,7 @@ body{
     font-family: "Poppins", serif;
 }
 
-.faq,.jadwal,.syarat,.unduhan,.ppdb,.prestasi,.ekskul,.fasilitas,.banner,.timeline,.tab-tab,.pimpinan,.guru,.karyawan,.berita2,.kalender_table,.unit_fasilitas,.unit_kegiatan,.penjelasan_guru,.penjelasan_unit,.menuju_ppdb,.artikel{
+.faq,.jadwal,.syarat,.unduhan,.ppdb,.prestasi,.ekskul,.fasilitas,.banner,.timeline,.tab-tab,.pimpinan,.guru,.karyawan,.berita2,.kalender_table,.unit_fasilitas,.unit_kegiatan,.penjelasan_guru,.penjelasan_unit,.menuju_ppdb,.artikel,.pengumuman,.loker{
     font-family: "Poppins", serif;
 }
 
@@ -99,7 +99,7 @@ header.navbar{
     font-weight: 400;
     font-style: italic;
     color: #fff;
-    margin: 0 1.5rem;
+    margin: 0 1rem;
     font-size: 1.1rem;
     
 }
@@ -1526,6 +1526,7 @@ header.navbar{
 .syarat,
 .unduhan,
 .artikel,
+.loker,
 #kontak{
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -1666,7 +1667,7 @@ header.navbar{
 }
 
 .fasilitas .tab-pane .card .card-body{
-    padding-top: 2rem;
+    /* padding-top: 2rem; */
     padding-left: 0;
 }
 
@@ -2073,6 +2074,36 @@ header.navbar{
   font-size: 1.2rem;
 }
 
+.info_ {
+  margin: 0;
+  padding: 0;
+  background-color: #f4f7fb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.pengumuman {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  max-width: 500px;
+} 
+.pengumuman h1 {
+  color: #003d99;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.pengumuman p {
+  font-size: 1rem;
+  color: #333;
+}
+
 /* artikel prestasi */
 
 .artikel .meta-info {
@@ -2157,7 +2188,7 @@ header.navbar{
 /* floating menu */
 
 .yspp-floating-menu{
-  bottom: 0;
+  /* bottom: 0; */
   display: flex;
   flex-direction: column;
   gap: 0.125rem;
@@ -2186,6 +2217,95 @@ header.navbar{
   font-size: 0.6rem;
   font-weight: 500;
 }
+
+/* Loker */
+
+.loker .card-wrapper {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+.loker .card-wrapper.active {
+  display: block;
+  opacity: 1;
+}
+
+.loker .container {
+  width: 1265px;
+  margin: auto;
+}
+
+.loker .card {
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 1.5rem;
+  align-items: center;
+  overflow: hidden;
+}
+
+.loker .card img {
+  width: 180px;
+  height: auto;
+  object-fit: cover;
+}
+
+.loker .card .card-body {
+  padding: 1rem 3rem;
+}
+
+.loker .card .card-body h5 {
+  /* margin-top: 0; */
+  color: #111F86;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.loker .card .card-body span {
+  font-weight: 400;
+  color: #757575;
+}
+
+.loker .card .card-body p {
+  font-size: .95rem;
+  margin-top: .4rem;
+}
+
+/* .loker .card .card-content .btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #003d99;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+} */
+
+/* .loker .card-group {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+} */
+
+/* .loker .card-group.horizontal .card {
+  flex: 1 1 calc(50% - 0.75rem);
+} */
+
+/* .loker.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+} */
+
+/* .loker .pagination a {
+  margin: 0 5px;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  background-color: #003d99;
+  color: white;
+  border-radius: 4px;
+  font-size: 0.9rem;
+} */
 
 
 /* Footer */
