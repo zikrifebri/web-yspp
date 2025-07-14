@@ -1,0 +1,19 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/ysppusri/public_html/
+    - /bin/cp faq.html $DEPLOYPATH
+    - /bin/cp fasilitas.html $DEPLOYPATH
+    - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp kalender.html $DEPLOYPATH
+    - /bin/cp loker.html $DEPLOYPATH
+    - /bin/cp ppdb.html $DEPLOYPATH
+    - /bin/cp script.js $DEPLOYPATH
+    - /bin/cp style.css $DEPLOYPATH
+    - /bin/cp -R berita $DEPLOYPATH
+    - /bin/cp -R bootstrap $DEPLOYPATH
+    - /bin/cp -R image $DEPLOYPATH
+    - /bin/cp -R peserta_didik $DEPLOYPATH
+    - /bin/cp -R prestasi $DEPLOYPATH
+    - /bin/cp -R profil $DEPLOYPATH
+    - /bin/cp -R unit $DEPLOYPATH
