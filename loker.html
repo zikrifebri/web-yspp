@@ -203,7 +203,7 @@
                         <h5 class="card-title">Guru TK Pusri</h5>
                         <span> Juni 25, 2025 </span>
                         <p class="card-text">Dibutuhkan Guru TK Dengan Min. S1 PAUD/Psikologi ....</p>
-                        <a href="#" class="btn btn-primary btn-sm">Selengkapnya</a>
+                        <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalLowongan" onclick="showModalImage('image/loker/Loker TK.png')">Selengkapnya</button>
                       </div>
                     </div>
                   </div>
@@ -214,7 +214,7 @@
                         <h5 class="card-title">Guru SD Pusri</h5>
                         <span> Juni 20, 2025 </span>
                         <p class="card-text">Posisi Yang Dibutuhkan : <br> - Guru Bimbingan Koseling <br> - Guru Bahasa Inggris <br> - Guru Pendidikan Jasmani, Olahraga, dan Kesehatan</p>
-                        <a href="#" class="btn btn-primary btn-sm">Selengkapnya</a>
+                        <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalLowongan" onclick="showModalImage('image/loker/Loker SD.png')">Selengkapnya</button>             
                       </div>
                     </div>
                   </div>
@@ -231,7 +231,7 @@
                         <h5 class="card-title">Guru SMP Pusri</h5>
                         <span> Mei 10, 2025 </span>
                         <p class="card-text">Posisi Yang Dibutuhkan : <br> - Guru TIK (Sistem Informasi) <br> - Guru Bahasa Indonesia <br> - Guru Matematika</p>
-                        <a href="#" class="btn btn-primary btn-sm">Selengkapnya</a>
+                        <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalLowongan" onclick="showModalImage('image/loker/Loker SMP.png')">Selengkapnya</button>              
                       </div>
                     </div>
                   </div>
@@ -253,6 +253,21 @@
             </nav>
         </div>
     </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalLowongan" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalLabel">Detail Lowongan</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img id="modalImage" src="" class="img-fluid" alt="Detail Gambar">
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="kontak-wa d-flex flex-column" style="position: fixed; top: 90%; right: 0px; transform: translateY(-50%); background-color: #fff; z-index: 5; width: 57px; border-radius: 25px 0 0 25px; box-shadow: 0 0 10px;">
         <div style="margin-left: 13px; margin-top: 23px; margin-bottom: 23px;">
@@ -350,6 +365,45 @@
     <script src="script.js"></script>
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+      let currentPage = 0;
+    const pages = document.querySelectorAll('.card-wrapper');
+    const prevBtn = document.getElementById('prevPage');
+    const nextBtn = document.getElementById('nextPage');
+
+    function changePage(index) {
+      if (index < 0 || index >= pages.length) return;
+
+      // animasi keluar halaman aktif
+      pages[currentPage].classList.remove('active');
+      setTimeout(() => {
+        currentPage = index;
+        pages.forEach((p, i) => p.style.display = i === currentPage ? 'block' : 'none');
+        pages[currentPage].classList.add('active');
+        updatePagination();
+      }, 200);
+    }
+
+    function updatePagination() {
+      prevBtn.classList.toggle('disabled', currentPage === 0);
+      nextBtn.classList.toggle('disabled', currentPage === pages.length - 1);
+    }
+
+    prevBtn.addEventListener('click', e => {
+      e.preventDefault();
+      if (currentPage > 0) changePage(currentPage - 1);
+    });
+
+    nextBtn.addEventListener('click', e => {
+      e.preventDefault();
+      if (currentPage < pages.length - 1) changePage(currentPage + 1);
+    });
+
+    function showModalImage(imgUrl) {
+      document.getElementById('modalImage').src = imgUrl;
+    }
+    </script>
     
 </body>
 </html>

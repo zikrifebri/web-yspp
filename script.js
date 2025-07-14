@@ -193,38 +193,6 @@ document.addEventListener('click', function (e) {
 //   toggleIcon.className = isToggled ? 'bi bi-x' : 'bi bi-list';
 // });
 
-let currentPage = 0;
-    const pages = document.querySelectorAll('.card-wrapper');
-    const prevBtn = document.getElementById('prevPage');
-    const nextBtn = document.getElementById('nextPage');
-
-    function changePage(index) {
-      if (index < 0 || index >= pages.length) return;
-
-      // animasi keluar halaman aktif
-      pages[currentPage].classList.remove('active');
-      setTimeout(() => {
-        currentPage = index;
-        pages.forEach((p, i) => p.style.display = i === currentPage ? 'block' : 'none');
-        pages[currentPage].classList.add('active');
-        updatePagination();
-      }, 200);
-    }
-
-    function updatePagination() {
-      prevBtn.classList.toggle('disabled', currentPage === 0);
-      nextBtn.classList.toggle('disabled', currentPage === pages.length - 1);
-    }
-
-    prevBtn.addEventListener('click', e => {
-      e.preventDefault();
-      if (currentPage > 0) changePage(currentPage - 1);
-    });
-
-    nextBtn.addEventListener('click', e => {
-      e.preventDefault();
-      if (currentPage < pages.length - 1) changePage(currentPage + 1);
-    });
 
 //   Kalender
 
