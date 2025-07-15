@@ -2,6 +2,7 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/ysppusri/public_html/
+    - /bin/cp .htaccess $DEPLOYPATH
     - /bin/cp faq.html $DEPLOYPATH
     - /bin/cp fasilitas.html $DEPLOYPATH
     - /bin/cp index.html $DEPLOYPATH
