@@ -7,8 +7,8 @@ deployment:
     - /bin/cp fasilitas.html $DEPLOYPATH
     - /bin/cp index.html $DEPLOYPATH
     - /bin/cp kalender.html $DEPLOYPATH
-    - /bin/cp loker.html $DEPLOYPATH
-    - /bin/cp ppdb.html $DEPLOYPATH
+    - /bin/cp lowongan-pekerjaan.html $DEPLOYPATH
+    - /bin/cp spmb.html $DEPLOYPATH
     - /bin/cp script.js $DEPLOYPATH
     - /bin/cp style.css $DEPLOYPATH
     - /bin/cp -R berita $DEPLOYPATH
