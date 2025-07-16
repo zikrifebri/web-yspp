@@ -2586,6 +2586,10 @@ footer .logo p{
     object-position: 55% center;
   }
 
+  .hero .carousel-item .img2{
+    object-position: 75% center;
+  }
+
   .hero .carousel-item .img3{
     object-position: 50% center;
   }
