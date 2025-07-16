@@ -2465,7 +2465,7 @@ footer .logo p{
   }
 
   .berita .card .card-body{
-    height: 140px;
+    /* height: 140px; */
     padding-top: 11px;
   }
   
@@ -2694,6 +2694,10 @@ footer .logo p{
     height: 100%;
   }
 
+  .ppdb #carouselPPDB .carousel-item{
+    margin-left: 17.5rem !important;
+  }
+
   #berita{
     margin-bottom: 0;
   }
@@ -2722,6 +2726,22 @@ footer .logo p{
   .berita #prestasi-tab-pane .card .card-body{
     width: 700px !important;
     margin-left: 140px;
+  }
+
+  .berita #prestasi-tab-pane .card .card-body h4{
+    font-size: 1.7rem !important;
+  }
+
+  .berita #prestasi-tab-pane .card .card-body h4 span{
+    font-size: 1.4rem !important;
+  }
+
+  .berita #prestasi-tab-pane .card .card-body h1{
+    font-size: 1.3rem !important;
+  }
+
+  .berita #prestasi-tab-pane .card .card-body p{
+    font-size: 1.1rem !important;
   }
 
   .berita #berita-tab-pane .card{
