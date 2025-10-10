@@ -1,8 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body{
   /* max-width: 1440px; */
     /* font-size: 5.2rem; */
     /* font-family: "Poppins", serif; */
     /* min-height: 3000px; */
+    overflow-x: hidden;
 }
 
 .timeline .container,
@@ -143,7 +150,10 @@ header.navbar{
 }
 
 #hero .carousel-item img{
-    height: 930px;
+    /* height: 930px; */
+    height: 100vh;
+    object-fit: cover;
+    width: 100%;
 }
 
 .hero .hero_{
@@ -153,8 +163,15 @@ header.navbar{
   transform: translate(-50%, -50%);
   background: #f5f5f5;
   width: 1000px; */
-  height: 900px;
-  box-shadow: 0 30px 50px #dbdbdb;
+  /* height: 900px;
+  box-shadow: 0 30px 50px #dbdbdb; */
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  height: auto;
+  background: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
 
@@ -213,6 +230,10 @@ header.navbar{
   }
 }
 
+.hero_ .content {
+  padding: 2rem;
+}
+
 .hero_ .item .content{
   position: absolute;
   top: 50%;
@@ -229,12 +250,16 @@ header.navbar{
 }
 
 .hero_ .content .name{
-  font-size: 40px;
+  /* font-size: 40px;
   text-transform: uppercase;
   font-weight: bold;
   width: 500px;
   opacity: 0;
-  animation: animate 1s ease-in-out 0.7s 1 forwards;
+  animation: animate 1s ease-in-out 0.7s 1 forwards; */
+  font-size: 2rem;
+  font-weight: bold;
+  color: #0e223e;
+  text-align: center;
 }
 
 .hero_ .content .deskripsi{
@@ -280,6 +305,37 @@ header.navbar{
 
 .hero .button button:hover{
   background: #111F86;
+}
+
+body.modal-open {
+  overflow: hidden !important;
+  height: 100vh !important;
+}
+
+.modal {
+  z-index: 1055 !important;
+}
+
+.modal-backdrop {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  z-index: 1050 !important;
+}
+
+.modal-backdrop.show {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100vw !important;
+  height: 100vh !important;
+  background-color: rgba(0,0,0,0.5) !important;
+  z-index: 1040 !important;
 }
 
 .visimisi .badan .ucapan{
@@ -494,13 +550,17 @@ header.navbar{
 }
 
 .berita .card_img{
-  margin-left: 100px;
+  /* margin-left: 100px; */
+  margin: auto;
 }
 
 .berita .card_img .img-container{
-  width: 536px;
   height: 370px;
+  width: 100%;
+  max-width: 536px;
+  margin: auto;
   overflow: hidden;
+  border-radius: 10px;
 }
 
 .berita .card_img .img-container img{
@@ -669,21 +729,36 @@ header.navbar{
     padding-right: 0;
     padding-left: 0;
     margin-bottom: 200px;
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem; */
   }
 
   .unit .card_ .card{
     border-radius: 0;
     border-style: none;
+    /* width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); */
   }
 
   .unit .card_ .card .card-img{
-    width: 100%;
-    display: block;
-    width: 330px;
-    height: 500px;
-    border-radius: 0;
-    object-fit: cover;
+    width: 100%; 
+    display: block; 
+    width: 330px; 
+    height: 500px; 
+    border-radius: 0; 
+    object-fit: cover; 
     object-position: 30% center;
+    /* display: block;
+    border-radius: 0;
+    object-position: 30% center;
+    width: 100%;
+    height: auto;
+    object-fit: cover; */
   }
 
   .unit .card_ .card .card-img-overlay{
@@ -758,10 +833,11 @@ header.navbar{
   }
 
   .alumni .swiper {
-    margin: 100px auto;
-    margin-top: 50px;
-    width: 320px;
     height: 300px;
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 1rem;
   }
 
   .alumni .swiper .swiper-wrapper{
@@ -2468,7 +2544,8 @@ footer .logo p{
   }
 
   .berita .card_img{
-    margin-left: 0;
+    /* margin-left: 0; */
+    margin: auto;
   }
 
   .berita .card .card-img-overlay{
@@ -2538,9 +2615,43 @@ footer .logo p{
   }
 }
 
+@media (max-width: 992px) {
+  .hero_ .content .name {
+    font-size: 1.8rem;
+  }
+
+  .unit .card_ {
+    gap: 0.5rem;
+  }
+}
+
 
 @media (max-width: 768px) {
+  .hero .hero_ {
+    width: 100%;
+    box-shadow: none;
+    border-radius: 0;
+  }
 
+  .hero_ .content {
+    padding: 1rem;
+  }
+
+  .hero_ .content .name {
+    font-size: 1.5rem;
+  }
+
+  .berita .card_img .img-container {
+    max-width: 100%;
+  }
+
+  .unit .card_ .card {
+    max-width: 100%;
+  }
+
+  .alumni .swiper-slide {
+    padding: 1rem;
+  }
 }
 
 @media (max-width: 576px){
@@ -2949,6 +3060,16 @@ footer .logo p{
     width: 1050px;
   }
 
+}
+
+@media (max-width: 480px) {
+  .hero_ .content .name {
+    font-size: 1.2rem;
+  }
+
+  .alumni .swiper-slide {
+    font-size: 0.9rem;
+  }
 }
 
 /* semua {
