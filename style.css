@@ -533,6 +533,42 @@ body.modal-open {
   
 }
 
+.berita #prestasi-tab-pane .card .carousel-clickable {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+.berita #prestasi-tab-pane .card .carousel-clickable.active-pause {
+  transform: scale(0.98);
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Overlay icon */
+.berita #prestasi-tab-pane .card .carousel-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  opacity: 0;
+  transition: opacity 0.28s ease;
+  z-index: 2;
+  pointer-events: none; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.berita #prestasi-tab-pane .card .carousel-overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.berita #prestasi-tab-pane .card .carousel-overlay .carousel-icon {
+  font-size: 3rem;
+  color: white;
+  opacity: 0.9;
+  pointer-events: none;
+}
 
 .berita .nav .nav-item .nav-link{
     color: #58595b;
@@ -833,7 +869,7 @@ body.modal-open {
   }
 
   .alumni .swiper {
-    height: 300px;
+    height: 355px;
     width: 100%;
     max-width: 1000px;
     margin: auto;
