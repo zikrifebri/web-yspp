@@ -753,6 +753,15 @@ body.modal-open {
   font-size: 1rem;
 }
 
+.berita #prestasi-tab-pane .card .card-body .card-title .judul{
+  text-decoration: none; 
+  color: #000;
+}
+
+.berita #prestasi-tab-pane .card .card-body .card-title .judul:hover{
+  color: #111F86;
+}
+
 /* Unit Sekolah */
 
 
