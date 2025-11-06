@@ -1486,7 +1486,7 @@ body.modal-open {
     top: 0;
     left: 0;
     width: 100%; */
-    background: url(../image/DSC05511.JPG) rgba(14, 49, 74, 0.5);
+    background: url(../image/DSC05511.webp) rgba(14, 49, 74, 0.5);
     background-size: cover;
     background-blend-mode: multiply;
     background-position: 50% 65%;
