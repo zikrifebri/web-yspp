@@ -1495,7 +1495,7 @@ body.modal-open {
 }
 
 .banner.hero-banner {
-  background: url('/image/DSC05245.webp') center / cover no-repeat;
+  background: url('../image/DSC05245.webp') center / cover no-repeat !important;
   height: 600px;
 }
 
