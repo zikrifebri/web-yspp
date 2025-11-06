@@ -1494,6 +1494,11 @@ body.modal-open {
     height: 600px;
 }
 
+.banner.hero-banner {
+  background: url('/image/DSC05245.webp') center / cover no-repeat;
+  height: 600px;
+}
+
 .banner .d-flex {
   height: 600px;
   padding-bottom: 5rem;
