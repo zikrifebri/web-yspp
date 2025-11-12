@@ -762,8 +762,37 @@ body.modal-open {
   color: #111F86;
 }
 
-/* Unit Sekolah */
+.carousel-scroll-container {
+  overflow: hidden;
+  position: relative;
+}
 
+.owl-carousel {
+  width: 100%;
+}
+.owl-carousel .owl-stage {
+  display: flex !important;
+  transition-timing-function: linear !important;
+}
+
+.owl-carousel .owl-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.owl-carousel .owl-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.owl-nav, .owl-dots { display:none; }
+.owl-carousel { cursor: grab; }
+.owl-carousel:active { cursor: grabbing; }
+
+/* Unit Sekolah */
 
   .unit .judul{
     margin-top: 5rem;
