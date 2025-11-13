@@ -769,6 +769,7 @@ body.modal-open {
   position: relative;
   margin-top: 30px;
   border-radius: 12px;
+  width: 100%;
 }
 
 .carousel-scroll {
@@ -781,7 +782,7 @@ body.modal-open {
 .carousel-scroll img {
   flex: 0 0 auto;
   width: 100%;
-  max-width: 500px;
+  width: 500px;
   border-radius: 12px;
   object-fit: cover;
   cursor: grab;
@@ -789,6 +790,7 @@ body.modal-open {
   user-select: none;
   -webkit-user-drag: none;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  object-position: center;
 }
 
 .carousel-scroll img:hover {
@@ -807,6 +809,8 @@ body.modal-open {
 
 .text_deskripsi {
   line-height: 1.8;
+  margin-top: 50px;
+  padding-top: 50px;
 }
 
 .text_deskripsi h1 {
@@ -2332,6 +2336,23 @@ body.modal-open {
   }
 }
 
+@media (max-width: 1366px) {
+  
+  .artikel .container {
+    max-width: 1000px;
+    padding: 35px;
+  }
+
+  .artikel h2 {
+    font-size: 1.8rem;
+  }
+
+  .artikel .carousel-scroll img {
+    width: 450px;
+    height: 100%;
+  }
+}
+
 .syarat .judul{
   color: #111F86;
 }
@@ -2782,6 +2803,25 @@ footer .logo p{
     height: 80px;
   }
 
+  .artikel .container {
+    max-width: 900px;
+    padding: 30px;
+  }
+
+  .artikel h2 {
+    font-size: 1.6rem;
+  }
+
+  .artikel .carousel-scroll img {
+    width: 400px;
+    height: 100%;
+  }
+
+  .artikel .meta-info {
+    gap: 20px;
+    font-size: 0.9rem;
+  }
+
   footer{
     width: 1055px;
   }
@@ -2794,6 +2834,32 @@ footer .logo p{
 
   .unit .card_ {
     gap: 0.5rem;
+  }
+
+  .artikel .container {
+    padding: 25px;
+  }
+
+  .artikel h2 {
+    font-size: 1.5rem;
+  }
+
+  .artikel .carousel-scroll img {
+    width: 380px;
+    height: 100%;
+  }
+
+  .artikel .text_deskripsi {
+    margin-top: 40px;
+    padding-top: 40px;
+  }
+
+  .artikel .text_deskripsi h1 {
+    font-size: 1rem;
+  }
+
+  .artikel .text_deskripsi p {
+    font-size: 0.95rem;
   }
 }
 
@@ -2827,7 +2893,40 @@ footer .logo p{
 
   .carousel-scroll img {
     max-width: 350px;
-    height: 250px;
+    height: 100%;
+  }
+
+  .artikel .container {
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .artikel h2 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+  }
+
+  .artikel .meta-info {
+    gap: 15px;
+    font-size: 0.85rem;
+  }
+
+  .artikel .carousel-scroll-container {
+    margin-top: 20px;
+  }
+
+  .artikel .carousel-scroll {
+    gap: 12px;
+  }
+
+  .artikel .carousel-scroll img {
+    width: 350px;
+    height: 100%;
+  }
+
+  .artikel .text_deskripsi {
+    margin-top: 35px;
+    padding-top: 35px;
   }
 }
 
@@ -3233,8 +3332,48 @@ footer .logo p{
   }
 
   .banner{
-    height: 800px;
+    height: 100%;
     width: 1050px;
+  }
+
+  .artikel .container {
+    padding: 20px 15px;
+  }
+
+  .artikel h2 {
+    font-size: 1.3rem;
+  }
+
+  .artikel .meta-info {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 10px;
+  }
+
+  .artikel .carousel-scroll img {
+    width: 300px;
+    height: 100%;
+    border-radius: 10px;
+  }
+
+  .artikel .carousel-scroll img:hover {
+    transform: scale(1.02);
+  }
+
+  .artikel .text_deskripsi {
+    margin-top: 30px;
+    padding-top: 30px;
+  }
+
+  .artikel .text_deskripsi h1 {
+    font-size: 0.95rem;
+    padding-left: 12px;
+    border-left-width: 3px;
+  }
+
+  .artikel .text_deskripsi p {
+    font-size: 0.9rem;
+    line-height: 1.7;
   }
 
 }
@@ -3246,6 +3385,55 @@ footer .logo p{
 
   .alumni .swiper-slide {
     font-size: 0.9rem;
+  }
+
+  .artikel .container {
+    padding: 18px 12px;
+    border-radius: 10px;
+  }
+
+  .artikel h2 {
+    font-size: 1.15rem;
+    line-height: 1.4;
+  }
+
+  .artikel .meta-info {
+    font-size: 0.8rem;
+  }
+
+  .artikel .meta-info .icon {
+    font-size: 0.9rem;
+  }
+
+  .artikel .carousel-scroll-container {
+    margin-top: 15px;
+    border-radius: 10px;
+  }
+
+  .artikel .carousel-scroll {
+    gap: 10px;
+  }
+
+  .artikel .carousel-scroll img {
+    width: 280px;
+    height: 100%;
+    border-radius: 8px;
+  }
+
+  .artikel .text_deskripsi {
+    margin-top: 25px;
+    padding-top: 25px;
+  }
+
+  .artikel .text_deskripsi h1 {
+    font-size: 0.9rem;
+    padding-left: 10px;
+  }
+
+  .artikel .text_deskripsi p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    text-align: left;
   }
 }
 
