@@ -126,14 +126,22 @@
             </div>
           </div>
         </div>
-        <div class="carousel-scroll-container mt-3">
+        <!-- <div class="carousel-scroll-container mt-3">
           <div class="owl-carousel owl-theme" id="artikelOwl">
             <div class="item"><img src="./../../image/berita/8/SD_1.jpg" alt="Slide 1"></div>
             <div class="item"><img src="./../../image/berita/8/SD_2.jpg" alt="Slide 2"></div>
             <div class="item"><img src="../../../image/berita/8/SD_3.jpg" alt="Slide 3"></div>
             <div class="item"><img src="../../../image/berita/8/SD_4.jpg" alt="Slide 4"></div>
           </div>
-         </div>
+         </div> -->
+         <div class="carousel-scroll-container mt-3">
+          <div class="carousel-scroll" id="dragScroll">
+            <img src="./../../image/berita/8/SD_1.jpg" alt="Slide 1">
+            <img src="./../../image/berita/8/SD_2.jpg" alt="Slide 2">
+            <img src="../../../image/berita/8/SD_3.jpg" alt="Slide 3">
+            <img src="../../../image/berita/8/SD_4.jpg" alt="Slide 4">
+          </div>
+        </div>
         <div class="text_deskripsi mt-5 pt-5">
           <h1 class="text fs-6 fw-semibold card-subtitle mb-3" style="padding-top: 0px; margin-top: 24px; padding-bottom: 0px;">
             <span>Kemenkeu Mengajar 2025 Hadir di SD Pusri Palembang: Tanamkan Semangat Cinta Negeri Sejak Dini
@@ -242,7 +250,7 @@
     <script src="../../../script.js"></script>
     <script src="../../../bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <script>
+    <!-- <script>
       $(document).ready(function(){
         const $carousel = $('#artikelOwl');
         $carousel.owlCarousel({
@@ -272,7 +280,236 @@
           $carousel.trigger('refresh.owl.carousel');
         });
       });
-      </script>
-    
+    </script> -->
+    <!-- <script>
+      (function() {
+        const slider = document.getElementById('dragScroll');
+        let isPointerDown = false;
+        let isDragging = false;
+        let startX = 0;
+        let startScrollLeft = 0;
+        let maxScroll = 0;
+        let isUserInteracting = false; // saat pointer down / hover
+        let lastTimestamp = 0;
+      
+        // Auto-scroll config
+        const PIXELS_PER_SECOND = 30; // ubah ini untuk lebih cepat/lambat
+        let autoScrollEnabled = true;
+      
+        // Hitung maxScroll saat load & resize & saat semua gambar siap
+        function updateMaxScroll() {
+          maxScroll = slider.scrollWidth - slider.clientWidth;
+        }
+      
+        // Tunggu semua gambar di slider ter-load lalu update ukuran
+        function waitImagesLoaded(container) {
+          const imgs = Array.from(container.querySelectorAll('img'));
+          const promises = imgs.map(img => {
+            if (img.complete) return Promise.resolve();
+            return new Promise(res => img.addEventListener('load', res), { once: true });
+          });
+          return Promise.all(promises);
+        }
+      
+        waitImagesLoaded(slider).then(() => {
+          updateMaxScroll();
+        });
+      
+        window.addEventListener('resize', () => {
+          updateMaxScroll();
+        });
+      
+        // Pointer events untuk drag (bekerja untuk mouse & touch & pen)
+        slider.addEventListener('pointerdown', (e) => {
+          isPointerDown = true;
+          isDragging = false;
+          slider.setPointerCapture(e.pointerId);
+          startX = e.clientX;
+          startScrollLeft = slider.scrollLeft;
+          isUserInteracting = true;
+          slider.classList.add('dragging');
+        });
+      
+        slider.addEventListener('pointermove', (e) => {
+          if (!isPointerDown) return;
+          const dx = e.clientX - startX;
+          if (Math.abs(dx) > 5) isDragging = true; // threshold kecil
+          if (isDragging) {
+            e.preventDefault();
+            // kecepatan drag (bisa sesuaikan multiplier)
+            slider.scrollLeft = startScrollLeft - dx;
+          }
+        });
+      
+        function releasePointer(e) {
+          if (!isPointerDown) return;
+          isPointerDown = false;
+          try { slider.releasePointerCapture(e.pointerId); } catch (err) {}
+          slider.classList.remove('dragging');
+          // beri sedikit waktu sebelum auto-scroll kembali aktif
+          isUserInteracting = false;
+        }
+      
+        slider.addEventListener('pointerup', releasePointer);
+        slider.addEventListener('pointercancel', releasePointer);
+        slider.addEventListener('pointerleave', (e) => {
+          // jika pointer meninggalkan area saat masih menekan, lepaskan
+          if (isPointerDown) releasePointer(e);
+          // tapi juga pause ketika hover out
+        });
+      
+        // Pause auto-scroll saat hover / fokus (opsional)
+        slider.addEventListener('mouseenter', () => { isUserInteracting = true; });
+        slider.addEventListener('mouseleave', () => { isUserInteracting = false; });
+      
+        // Auto-scroll loop menggunakan requestAnimationFrame untuk kelancaran
+        function rafStep(timestamp) {
+          if (!lastTimestamp) lastTimestamp = timestamp;
+          const delta = timestamp - lastTimestamp;
+          lastTimestamp = timestamp;
+      
+          if (autoScrollEnabled && !isUserInteracting) {
+            // geser kanan perlahan (normalize ke 60fps)
+            const px = (PIXELS_PER_SECOND * delta) / 1000;
+            slider.scrollLeft += px;
+      
+            updateMaxScroll(); // pastikan up-to-date
+      
+            // jika sudah sampai (atau sangat dekat) dengan ujung, kembali ke awal
+            if (slider.scrollLeft >= Math.max(0, maxScroll - 1)) {
+              // gunakan smooth scroll ke 0
+              // setTimeout kecil buat memberi waktu agar posisi akhir terlihat sebelum reset
+              slider.scrollTo({ left: 0, behavior: 'smooth' });
+              // setelah melakukan scrollTo ke awal, kita juga bisa reset lastTimestamp
+              // supaya kecepatan tetap konsisten
+              lastTimestamp = performance.now();
+            }
+          }
+      
+          requestAnimationFrame(rafStep);
+        }
+      
+        // mulai loop
+        requestAnimationFrame(rafStep);
+      
+        // Jika ingin menonaktifkan auto-scroll saat halaman tidak terlihat (tab inactive)
+        document.addEventListener('visibilitychange', () => {
+          if (document.hidden) {
+            // pause rendering loop by toggling flag
+            // (we keep raf running but skip movements)
+            isUserInteracting = true;
+          } else {
+            isUserInteracting = false;
+          }
+        });
+      
+        // Jika pengguna mau tombol untuk toggle auto-scroll nanti, mudah ditambahkan:
+        // function setAutoScroll(on) { autoScrollEnabled = !!on; }
+      
+      })();
+    </script> -->
+
+    <script>
+      const carousel = document.getElementById('dragScroll');
+      let isDragging = false;
+      let startX;
+      let scrollLeft;
+      let animationId;
+      let isHovering = false;
+      let currentTranslate = 0;
+      let velocity = 0.5; // Kecepatan autoplay (pixel per frame)
+  
+      // Clone images untuk infinite loop
+      function setupInfiniteLoop() {
+        const images = carousel.querySelectorAll('img');
+        images.forEach(img => {
+          const clone = img.cloneNode(true);
+          carousel.appendChild(clone);
+        });
+      }
+  
+      // Autoplay smooth
+      function autoplay() {
+        if (!isDragging && !isHovering) {
+          currentTranslate -= velocity;
+          
+          // Reset position saat mencapai setengah (karena sudah di-clone)
+          const totalWidth = carousel.scrollWidth / 2;
+          if (Math.abs(currentTranslate) >= totalWidth) {
+            currentTranslate = 0;
+          }
+          
+          carousel.style.transform = `translateX(${currentTranslate}px)`;
+        }
+        animationId = requestAnimationFrame(autoplay);
+      }
+  
+      // Mouse drag functionality
+      carousel.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        carousel.classList.add('dragging');
+        startX = e.pageX - carousel.offsetLeft;
+        scrollLeft = currentTranslate;
+        cancelAnimationFrame(animationId);
+      });
+  
+      carousel.addEventListener('mouseleave', () => {
+        if (isDragging) {
+          isDragging = false;
+          carousel.classList.remove('dragging');
+          autoplay();
+        }
+      });
+  
+      carousel.addEventListener('mouseup', () => {
+        isDragging = false;
+        carousel.classList.remove('dragging');
+        autoplay();
+      });
+  
+      carousel.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+        e.preventDefault();
+        const x = e.pageX - carousel.offsetLeft;
+        const walk = (x - startX) * 1.5;
+        currentTranslate = scrollLeft + walk;
+        carousel.style.transform = `translateX(${currentTranslate}px)`;
+      });
+  
+      // Hover pause
+      carousel.addEventListener('mouseenter', () => {
+        isHovering = true;
+      });
+  
+      carousel.addEventListener('mouseleave', () => {
+        isHovering = false;
+      });
+  
+      // Touch support untuk mobile
+      carousel.addEventListener('touchstart', (e) => {
+        isDragging = true;
+        startX = e.touches[0].pageX - carousel.offsetLeft;
+        scrollLeft = currentTranslate;
+        cancelAnimationFrame(animationId);
+      });
+  
+      carousel.addEventListener('touchend', () => {
+        isDragging = false;
+        autoplay();
+      });
+  
+      carousel.addEventListener('touchmove', (e) => {
+        if (!isDragging) return;
+        const x = e.touches[0].pageX - carousel.offsetLeft;
+        const walk = (x - startX) * 1.5;
+        currentTranslate = scrollLeft + walk;
+        carousel.style.transform = `translateX(${currentTranslate}px)`;
+      });
+  
+      // Initialize
+      setupInfiniteLoop();
+      autoplay();
+    </script>
+
 </body>
 </html>
