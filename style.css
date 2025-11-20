@@ -593,10 +593,10 @@ body.modal-open {
 .berita .card_img .img-container{
   height: 370px;
   width: 100%;
-  max-width: 536px;
+  /* max-width: 536px; */
   margin: auto;
   overflow: hidden;
-  border-radius: 10px;
+  /* border-radius: 10px; */
 }
 
 .berita .card_img .img-container img{
