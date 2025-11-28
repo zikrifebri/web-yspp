@@ -601,7 +601,7 @@ body.modal-open {
 
 .berita .card_img .img-container img{
   object-fit: cover;
-  object-position: 50% 40%;
+  object-position: 50% 20%;
   height: 100%;
   width: 100%;
   transition: transform 0.3s ease;
