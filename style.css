@@ -474,6 +474,12 @@ body.modal-open {
   object-fit:cover;
 }
 
+.kelebihan #carousel__ .carousel-inner .carousel-item img.carousel-img{
+  object-fit: cover;     
+  object-position: 50% 50%;
+  height: 450px;
+}
+
 .kelebihan #carousel__ .carousel-inner .carousel-item .carousel-caption h5{
   font-size: 1.5rem;
   font-weight: 600;
