@@ -14,7 +14,7 @@
     <!-- Bootstrap Icon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <!-- Swipper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <title>Yayasan Sosial Pendidikan Pusri</title>
 
 
@@ -328,6 +328,74 @@
           </div>
         </div>
         
+      </div>
+    </section>
+
+    <section class="penghargaan">
+      <div class="container">
+        <h2 class="fw-bold mb-4">Penghargaan</h2>
+
+        <div class="swiper penghargaanSwiper">
+          <div class="swiper-wrapper justify-content-center">
+
+            <!-- CARD ITEM -->
+            <div class="swiper-slide">
+              <div class="award-card"
+                  data-bs-toggle="modal"
+                  data-bs-target="#awardModal"
+                  data-title="Adiwiyata Tingkat Kota"
+                  data-year="2024"
+                  data-from="Walikota Palembang"
+                  data-desc="Penghargaan diberikan atas pencapaian tata kelola perusahaan yang baik."
+                  data-img="image/penghargaan/Adiwiyata TIngkat Kota SD Pusri Palembang.jpeg">
+
+                <span class="badge-award">Penghargaan</span>
+
+                <img src="image/penghargaan/Adiwiyata TIngkat Kota SD Pusri Palembang.jpeg" class="img-fluid" alt="">
+                <h6 class="mt-3">Adiwiyata Tingkat Kota Tahun 2024</h6>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="award-card"
+                  data-bs-toggle="modal"
+                  data-bs-target="#awardModal"
+                  data-title="Adiwiyata Tingkat Provinsi"
+                  data-year="2014"
+                  data-from="Gubernur Sumatera Selatan"
+                  data-desc="Penghargaan diberikan atas pencapaian tata kelola perusahaan yang baik."
+                  data-img="image/penghargaan/Adiwiyata TIngkat Provinsi SMP Pusri.jpeg">
+
+                <span class="badge-award">Penghargaan</span>
+
+                <img src="image/penghargaan/Adiwiyata TIngkat Provinsi SMP Pusri.jpeg" class="img-fluid" alt="">
+                <h6 class="mt-3">Adiwiyata Tingkat Provinsi Tahun 2014</h6>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="award-card"
+                  data-bs-toggle="modal"
+                  data-bs-target="#awardModal"
+                  data-title="Adiwiyata Tingkat Provinsi"
+                  data-year="2018"
+                  data-from="Gubernur Sumatera Selatan"
+                  data-desc="Penghargaan diberikan atas pencapaian tata kelola perusahaan yang baik."
+                  data-img="image/penghargaan/Adiwiyata TIngkat Provinsi SMA Pusri.jpeg">
+
+                <span class="badge-award">Penghargaan</span>
+
+                <img src="image/penghargaan/Adiwiyata TIngkat Provinsi SMA Pusri.jpeg" class="img-fluid" alt="">
+                <h6 class="mt-3">Adiwiyata Tingkat Provinsi Tahun 2018</h6>
+              </div>
+            </div>
+            
+          </div>
+
+          <!-- Navigation -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
       </div>
     </section>
 
@@ -1421,6 +1489,43 @@
       </div>
      </div>
 
+     <!-- modal penghargaan -->
+    <div class="modal fade" id="awardModal" tabindex="-1">
+      <div class="modal-dialog modal-xl modal-dialog-centered custom-award-modal">
+        <div class="modal-content border-0 rounded-4 shadow-lg">
+
+          <div class="modal-header border-0 pb-0">
+            <h5 class="modal-title fw-bold">Detail Penghargaan</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body pt-2">
+            <div class="row align-items-center">
+              
+              <!-- KIRI (GAMBAR) -->
+              <div class="col-lg-5">
+                <img id="modalImage" class="img-fluid rounded-3 award-modal-img">
+              </div>
+
+              <!-- KANAN (DETAIL) -->
+              <div class="col-lg-7">
+                <h3 id="modalTitle" class="fw-bold mb-3"></h3>
+                <p class="mb-2">
+                  <strong>Tahun:</strong> 
+                  <span id="modalYear"></span>
+                </p>
+                <p class="mb-3">
+                  <strong>Pemberian :</strong> 
+                  <span id="modalFrom"></span>
+                </p>
+                <p id="modalDesc" class="text-muted"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
      <footer class="text-white text-center p-3">
       <div class="container">
         <div class="widget-area-footer">
@@ -1506,8 +1611,7 @@
 
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <!-- <script src="bootstrap/js/bootstrap.bundle.min.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script>
       const swiper = new Swiper(".mySwiper", {
@@ -1605,5 +1709,61 @@
       });
     });
   </script>
+
+  <script>
+  const penghargaanSwiper = new Swiper(".penghargaanSwiper", {
+    slidesPerView: 4,
+    spaceBetween: 25,
+    loop: true,
+    grabCursor: true,
+
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+
+    navigation: {
+      nextEl: ".penghargaan .swiper-button-next",
+      prevEl: ".penghargaan .swiper-button-prev",
+    },
+
+    breakpoints: {
+        0: {
+          slidesPerView: 1.2,
+          spaceBetween: 16,
+        },
+
+        576: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 24,
+        },
+
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 28,
+      }
+    }
+  });
+  </script>
+
+  <script>
+  var awardModal = document.getElementById('awardModal');
+  awardModal.addEventListener('show.bs.modal', function (event) {
+    var button = event.relatedTarget;
+
+    document.getElementById('modalTitle').innerText = button.getAttribute('data-title');
+    document.getElementById('modalYear').innerText = button.getAttribute('data-year');
+    document.getElementById('modalFrom').innerText = button.getAttribute('data-from');
+    document.getElementById('modalDesc').innerText = button.getAttribute('data-desc');
+    document.getElementById('modalImage').src = button.getAttribute('data-img');
+  });
+  </script>
+
+
 </body>
 </html>

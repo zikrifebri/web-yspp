@@ -26,7 +26,7 @@ body{
 }
 
 
-.hero,.visimisi,.kelebihan,.berita,.unit,.info,.alumni,.testimoni,.kontak,footer{
+.hero,.visimisi,.penghargaan,.kelebihan,.berita,.unit,.info,.alumni,.testimoni,.kontak,footer{
     font-family: "Poppins", serif;
 }
 
@@ -459,6 +459,59 @@ body.modal-open {
   font-size: 1.25rem;
   font-weight: 500;
   padding: 1.8125rem 2.1875rem;
+}
+
+/* Penghargaan */
+.penghargaan-section {
+  background: #f8f9fa;
+}
+
+.award-card {
+  background: #fff;
+  border-radius: 24px;
+  padding: 24px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.05);
+  height: 100%;
+}
+
+.award-card:hover {
+  transform: translateY(-5px);
+}
+
+.award-card img {
+  height: 180px;
+  object-fit: contain;
+  transition: 0.3s;
+}
+
+.award-card h6 {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.badge-award {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  background: #ffc107;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.custom-award-modal {
+  max-width: 90% !important;
+}
+
+.award-modal-img {
+  width: 100%;
+  max-height: 480px;
+  object-fit: contain;
 }
 
 /* Kelebihan */
@@ -1802,6 +1855,7 @@ body.modal-open {
 .fasilitas,
 .prestasi,
 .visimisi,
+.penghargaan,
 .unit_fasilitas,
 .unit_kegiatan,
 .kelebihan,
@@ -2722,6 +2776,22 @@ footer .logo p{
     right: 90px;
   }
 
+   .award-card img {
+    height: 160px;
+  }
+
+  .award-card h6 {
+    font-size: 15px;
+  }
+
+  .custom-award-modal {
+    max-width: 92%;
+  }
+
+  .award-modal-img {
+    max-height: 420px;
+  }
+
   .berita .card_box{
     padding: 50px 0;
     margin-bottom: 100px;
@@ -2883,6 +2953,38 @@ footer .logo p{
 
   .hero_ .content .name {
     font-size: 1.5rem;
+  }
+
+  .award-card {
+    padding: 18px;
+    border-radius: 20px;
+  }
+
+  .award-card img {
+    height: 140px;
+  }
+
+  .award-card h6 {
+    font-size: 14px;
+  }
+
+  .custom-award-modal {
+    max-width: 95% !important;
+  }
+
+  .award-modal-img {
+    max-height: 320px;
+    margin-bottom: 20px;
+  }
+
+  /* Modal jadi stack */
+  #awardModal .row {
+    flex-direction: column;
+  }
+
+  #awardModal .col-lg-5,
+  #awardModal .col-lg-7 {
+    width: 100%;
   }
 
   .berita .card_img .img-container {
@@ -3100,6 +3202,36 @@ footer .logo p{
   .visimisi .badan p,
   .visimisi .badan li{
     font-size: 1.5rem;
+  }
+
+  .penghargaan {
+    padding: 60px 0;
+  }
+
+  .award-card {
+    padding: 16px;
+    border-radius: 18px;
+  }
+
+  .award-card img {
+    height: 120px;
+  }
+
+  .award-card h6 {
+    font-size: 13px;
+  }
+
+  .badge-award {
+    font-size: 11px;
+    padding: 4px 12px;
+  }
+
+  .award-modal-img {
+    max-height: 250px;
+  }
+
+  #awardModal .modal-content {
+    border-radius: 20px;
   }
 
   .kelebihan #carousel__ .carousel-inner .carousel-item .caption{
